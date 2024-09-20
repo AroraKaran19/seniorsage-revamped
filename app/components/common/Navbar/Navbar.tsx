@@ -24,6 +24,7 @@ const Navbar = () => {
               url: "/services/github-analysis",
               bgImage: "/github.webp",
               bgBlur: true,
+              textShadow: true,
             },
             {
               index: 2,
@@ -31,6 +32,7 @@ const Navbar = () => {
               url: "/services/resume-analysis",
               bgImage: "/resume.webp",
               bgBlur: true,
+              textShadow: true,
             },
             {
               index: 3,
@@ -38,6 +40,7 @@ const Navbar = () => {
               url: "/services/course-recommendation",
               bgImage: "/course.webp",
               bgBlur: true,
+              textShadow: true,
             },
           ],
         },

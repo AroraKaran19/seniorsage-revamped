@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 interface NavLinksProps {
@@ -12,6 +12,8 @@ interface NavLinksProps {
   mobileWrapper?: (value: boolean) => void;
   bgImage?: string;
   bgBlur?: boolean;
+  onClick?: () => void; // For mobile menu
+  textShadow?: boolean;
 }
 
 interface SubMenuValue {
@@ -24,6 +26,7 @@ interface SubMenuProps {
   name: string;
   url: string;
   classValue?: string;
+  subMenu?: SubMenuValue[];
   bgImage?: string;
   bgBlur?: boolean;
 }
@@ -37,27 +40,41 @@ const NavLinks = ({
   mobileWrapper,
   bgImage,
   bgBlur,
+  onClick,
+  textShadow,
 }: NavLinksProps) => {
   const currentPath = usePathname();
-  const [subMenuOpen, setSubMenuOpen] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
   const router = useRouter();
 
-  const handleNavClick = () => {
+  const handleNavClick = (mobile?: boolean, href?: string) => {
     if (url === currentPath) return;
-    if (subMenu) {
+    if (subMenu && !mobile) {
       setSubMenuOpen(!subMenuOpen);
     } else {
       if (mobileWrapper) {
         mobileWrapper(false); // Closes the mobile menu
       }
-      router.push(url);
+      router.push(href || url);
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div
       tabIndex={index}
-      onClick={() => handleNavClick()}
+      onClick={onClick || (() => handleNavClick(false, url))} // modified for mobile menu
       onMouseEnter={() => setSubMenuOpen(true)}
       onMouseLeave={() => setSubMenuOpen(false)}
       className={`navigation-link relative select-none ${
@@ -66,11 +83,34 @@ const NavLinks = ({
           : "text-black/30"
       } ${classValue}`}
       draggable={false}
-      style={bgImage ? { backgroundImage: `url(${bgImage})` , backgroundSize: "cover", backgroundPosition: "center" } : {}}
+      style={{
+        ...(bgImage
+          ? {
+              backgroundImage: `url(${bgImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }
+          : {}),
+        ...(textShadow && windowWidth < 768
+          ? { textShadow: "0.5px 0.25px black" }
+          : {}),
+      }}
     >
-      <Link href={""} draggable={false} className={`${bgImage ? (bgBlur ? "bg-white/30 sm:bg-white/10 backdrop-blur-sm h-full w-full flex justify-center items-center rounded-lg sm:rounded-2xl" : "") : ""}`}>
+      <Link
+        href={""}
+        draggable={false}
+        className={`${
+          bgImage
+            ? bgBlur
+              ? "bg-white/30 sm:bg-white/10 backdrop-blur-sm h-full w-full flex justify-center items-center rounded-lg sm:rounded-2xl"
+              : ""
+            : ""
+        }`}
+      >
         <div className="nav-link-name text-center w-full flex justify-center sm:justify-start items-center gap-0.5 z-[1003]">
-          <span className={`flex flex-wrap ${bgImage ? "sm:p-2" : ""}`}>{name}</span>
+          <span className={`flex flex-wrap ${bgImage ? "sm:p-2 sm:w-full flex justify-center items-center" : ""}`}>
+            {name}
+          </span>
           {subMenu && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +140,7 @@ const NavLinks = ({
           {subMenu.map((submenuItem, subIndex) => (
             <div
               key={subIndex}
-              className="sub-menu-links flex gap-1 h-full w-full sm:flex-col"
+              className="sub-menu-links flex gap-2 h-full w-full sm:flex-col"
             >
               {/* {submenuItem.title && (
                 <div className="sub-menu-title mb-2 underline flex flex-wrap text-center sm:hidden">
@@ -111,7 +151,13 @@ const NavLinks = ({
                 <NavLinks
                   key={itemIndex}
                   {...item}
-                  classValue={`sub-menu-item flex justify-center items-center pb-0 ${item.bgImage ? "text-white hover:text-white/90 sm:rounded-lg" : "text-black/30 hover:text-black"}`}
+                  url={item.url}
+                  onClick={() => handleNavClick(true, item.url)}
+                  classValue={`sub-menu-item flex justify-center items-center pb-0 ${
+                    item.bgImage
+                      ? "text-white hover:text-white/90 sm:rounded-lg"
+                      : "text-black/30 hover:text-black"
+                  }`}
                 />
               ))}
             </div>
