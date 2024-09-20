@@ -22,16 +22,22 @@ const Navbar = () => {
               index: 1,
               name: "Github Ananlysis",
               url: "/services/github-analysis",
+              bgImage: "/github.webp",
+              bgBlur: true,
             },
             {
               index: 2,
               name: "Resume Analysis",
               url: "/services/resume-analysis",
+              bgImage: "/resume.webp",
+              bgBlur: true,
             },
             {
               index: 3,
               name: "Course Recommendation",
               url: "/services/course-recommendation",
+              bgImage: "/course.webp",
+              bgBlur: true,
             },
           ],
         },
@@ -98,7 +104,12 @@ const Navbar = () => {
             </div>
             <div className="menu-links w-full flex flex-col gap-4 items-start">
               {menu.map((item) => (
-                <NavLinks key={item.index} {...item} classValue="menu-link" mobileWrapper={setMenuOpen} />
+                <NavLinks
+                  key={item.index}
+                  {...item}
+                  classValue="menu-link"
+                  mobileWrapper={setMenuOpen}
+                />
               ))}
             </div>
             <div className="menu-footer w-full h-16 flex justify-center items-center">
@@ -111,7 +122,10 @@ const Navbar = () => {
 
         {/* Main Navbar */}
         <div className="main-nav w-full h-full flex max-w-full">
-          <div className="hamburger-menu hidden sm:flex sm:flex-1 justify-start items-center mx-2 md:pl-10 sm:pl-2">
+          <div
+            className="hamburger-menu hidden sm:flex sm:flex-1 justify-start items-center mx-2 md:pl-10 sm:pl-2 select-none"
+            draggable={false}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -145,8 +159,9 @@ const Navbar = () => {
             <img
               src="/SeniorSage Logo.webp"
               alt="logo"
-              className="min-h-9 min-w-auto min-w-36 hover:cursor-pointer"
+              className="min-h-9 min-w-auto min-w-36 hover:cursor-pointer "
               onClick={() => window.location.replace("/")}
+              draggable={false}
             />
           </div>
           <div className="nav-links flex-none sm:hidden flex justify-center items-center gap-16 flex-wrap flex-shrink-0">
@@ -154,7 +169,7 @@ const Navbar = () => {
               <NavLinks key={item.index} {...item} />
             ))}
           </div>
-          <div className="authentication-btn flex-1 flex justify-end items-center pr-[7.75rem] md:pr-10 sm:px-2 sm:pr-4 flex-grow">
+          <div className="authentication-btn flex-1 flex justify-end items-center pr-[7.75rem] md:pr-10 sm:px-2 sm:pr-4 flex-grow select-none">
             <div className="authentication-wrapper flex justify-center items-center rounded-full bg-black hover:bg-black/80 text-white cursor-pointer sm:bg-transparent sm:text-black sm:p-0">
               <span className="sm:hidden">Register</span>
               <svg

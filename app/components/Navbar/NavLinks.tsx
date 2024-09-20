@@ -10,6 +10,8 @@ interface NavLinksProps {
   classValue?: string;
   subMenu?: SubMenuValue[];
   mobileWrapper?: Function;
+  bgImage?: string;
+  bgBlur?: boolean;
 }
 
 interface SubMenuValue {
@@ -22,6 +24,8 @@ interface SubMenuProps {
   name: string;
   url: string;
   classValue?: string;
+  bgImage?: string;
+  bgBlur?: boolean;
 }
 
 const NavLinks = ({
@@ -31,10 +35,12 @@ const NavLinks = ({
   classValue,
   subMenu,
   mobileWrapper,
+  bgImage,
+  bgBlur,
 }: NavLinksProps) => {
   const currentPath = usePathname();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
 
   const handleNavClick = () => {
     if (url === currentPath) return;
@@ -55,14 +61,16 @@ const NavLinks = ({
       onClick={() => handleNavClick()}
       onMouseEnter={() => setSubMenuOpen(true)}
       onMouseLeave={() => setSubMenuOpen(false)}
-      className={`navigation-link relative ${
+      className={`navigation-link relative pb-2 select-none ${
         currentPath === url || "/" + currentPath.split("/")[1] === url
           ? "text-black"
           : "text-black/30"
       } ${classValue}`}
+      draggable={false}
+      style={{ backgroundImage: bgImage, backgroundSize: "cover", backgroundPosition: "center" }}
     >
-      <Link href={""}>
-        <div className="nav-link-name text-center w-full flex justify-center sm:justify-start items-center gap-0.5 h-6 z-[1003]">
+      <Link href={""} draggable={false} className={`${bgImage ? (bgBlur ? "bg-white/30 backdrop-blur-sm h-full w-full flex justify-center items-center rounded-lg" : "") : ""}`}>
+        <div className="nav-link-name text-center w-full flex justify-center sm:justify-start items-center gap-0.5 z-[1003]">
           <span className="flex flex-wrap">{name}</span>
           {subMenu && (
             <svg
@@ -71,7 +79,7 @@ const NavLinks = ({
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className={`h-full flex items-center transition-all duration-300 ease-in-out ${
+              className={`h-6 flex items-center transition-all duration-300 ease-in-out ${
                 subMenuOpen && "-rotate-[180deg]"
               }`}
             >
@@ -86,25 +94,25 @@ const NavLinks = ({
       </Link>
       {subMenu && (
         <div
-          className={`sub-menu absolute sm:relative sm:left-0 sm:mobile top-full w-max bg-white cursor-default text-black justify-center items-center left-1/2 break-words z-[1004] ${
-            subMenuOpen ? "flex flex-col" : "hidden"
+          className={`sub-menu absolute sm:relative sm:left-0 top-full w-max bg-white cursor-default text-black justify-center items-center left-1/2 z-[1004] ${
+            subMenuOpen ? "flex flex-wrap" : "hidden"
           }`}
         >
           {subMenu.map((submenuItem, subIndex) => (
             <div
               key={subIndex}
-              className="sub-menu-links flex flex-col gap-1 w-full"
+              className="sub-menu-links flex gap-1 h-full w-full sm:flex-col"
             >
-              {submenuItem.title && (
+              {/* {submenuItem.title && (
                 <div className="sub-menu-title mb-2 underline flex flex-wrap text-center sm:hidden">
                   {submenuItem.title}
                 </div>
-              )}
+              )} */}
               {submenuItem.items.map((item, itemIndex) => (
                 <NavLinks
                   key={itemIndex}
                   {...item}
-                  classValue="sub-menu-item"
+                  classValue={`sub-menu-item flex justify-center items-center pb-0 ${item.bgImage ? "text-white hover:text-white/90" : "text-black/30 hover:text-black"}`}
                 />
               ))}
             </div>
