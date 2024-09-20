@@ -44,7 +44,7 @@ const NavLinks = ({
   textShadow,
 }: NavLinksProps) => {
   const currentPath = usePathname();
-  const [windowWidth, setWindowWidth] = useState(undefined);
+  const [windowWidth, setWindowWidth] = useState(0);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const router = useRouter();
 
@@ -70,8 +70,6 @@ const NavLinks = ({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  if (windowWidth === undefined) return null;
 
   return (
     <div
