@@ -60,7 +60,7 @@ const Navbar = () => {
   };
 
   const [isSticky, setIsSticky] = useState<boolean>(false);
-  let lastScrollY = useRef<number>(0);
+  const lastScrollY = useRef<number>(0);
 
   const handleScroll = () => {
     if (window.scrollY > 0 && window.scrollY < lastScrollY.current) {
@@ -166,7 +166,7 @@ const Navbar = () => {
           </div>
           <div className="nav-links flex-none sm:hidden flex justify-center items-center gap-16 flex-wrap flex-shrink-0">
             {menu.map((item) => (
-              <NavLinks key={item.index} {...item} />
+              <NavLinks key={item.index} {...item} classValue="pb-2" />
             ))}
           </div>
           <div className="authentication-btn flex-1 flex justify-end items-center pr-[7.75rem] md:pr-10 sm:px-2 sm:pr-4 flex-grow select-none">

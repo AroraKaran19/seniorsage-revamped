@@ -9,7 +9,7 @@ interface NavLinksProps {
   url: string;
   classValue?: string;
   subMenu?: SubMenuValue[];
-  mobileWrapper?: Function;
+  mobileWrapper?: (value: boolean) => void;
   bgImage?: string;
   bgBlur?: boolean;
 }
@@ -39,7 +39,7 @@ const NavLinks = ({
   bgBlur,
 }: NavLinksProps) => {
   const currentPath = usePathname();
-  const [subMenuOpen, setSubMenuOpen] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState(true);
   const router = useRouter();
 
   const handleNavClick = () => {
@@ -49,9 +49,8 @@ const NavLinks = ({
     } else {
       if (mobileWrapper) {
         mobileWrapper(false); // Closes the mobile menu
-      } else {
-        router.push(url);
       }
+      router.push(url);
     }
   };
 
@@ -61,17 +60,17 @@ const NavLinks = ({
       onClick={() => handleNavClick()}
       onMouseEnter={() => setSubMenuOpen(true)}
       onMouseLeave={() => setSubMenuOpen(false)}
-      className={`navigation-link relative pb-2 select-none ${
+      className={`navigation-link relative select-none ${
         currentPath === url || "/" + currentPath.split("/")[1] === url
           ? "text-black"
           : "text-black/30"
       } ${classValue}`}
       draggable={false}
-      style={{ backgroundImage: bgImage, backgroundSize: "cover", backgroundPosition: "center" }}
+      style={bgImage ? { backgroundImage: `url(${bgImage})` , backgroundSize: "cover", backgroundPosition: "center" } : {}}
     >
-      <Link href={""} draggable={false} className={`${bgImage ? (bgBlur ? "bg-white/30 backdrop-blur-sm h-full w-full flex justify-center items-center rounded-lg" : "") : ""}`}>
+      <Link href={""} draggable={false} className={`${bgImage ? (bgBlur ? "bg-white/30 sm:bg-white/10 backdrop-blur-sm h-full w-full flex justify-center items-center rounded-lg sm:rounded-2xl" : "") : ""}`}>
         <div className="nav-link-name text-center w-full flex justify-center sm:justify-start items-center gap-0.5 z-[1003]">
-          <span className="flex flex-wrap">{name}</span>
+          <span className={`flex flex-wrap ${bgImage ? "sm:p-2" : ""}`}>{name}</span>
           {subMenu && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +111,7 @@ const NavLinks = ({
                 <NavLinks
                   key={itemIndex}
                   {...item}
-                  classValue={`sub-menu-item flex justify-center items-center pb-0 ${item.bgImage ? "text-white hover:text-white/90" : "text-black/30 hover:text-black"}`}
+                  classValue={`sub-menu-item flex justify-center items-center pb-0 ${item.bgImage ? "text-white hover:text-white/90 sm:rounded-lg" : "text-black/30 hover:text-black"}`}
                 />
               ))}
             </div>
