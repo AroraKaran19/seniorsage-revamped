@@ -63,16 +63,24 @@ const Navbar = () => {
   };
 
   const [isSticky, setIsSticky] = useState<boolean>(false);
-  const lastScrollY = useRef<number>(0);
 
   const handleScroll = () => {
-    if (window.scrollY > 0 && window.scrollY < lastScrollY.current) {
-      setIsSticky(true);
-    } else {
-      setIsSticky(false);
-    }
-    lastScrollY.current = window.scrollY;
-  };
+      if (window.scrollY > 10) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+  // const lastScrollY = useRef<number>(0);
+
+  // const handleScroll = () => {
+  //   if (window.scrollY > 10 && window.scrollY < lastScrollY.current) {
+  //     setIsSticky(true);
+  //   } else {
+  //     setIsSticky(false);
+  //   }
+  //   lastScrollY.current = window.scrollY;
+  // };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -98,12 +106,12 @@ const Navbar = () => {
           }`}
         >
           <div
-            className={`menu-container bg-white w-[70vw] hidden sm:block absolute top-0 h-screen z-[1002] ${
+            className={`menu-container bg-white w-[70vw] absolute top-0 h-screen z-[1002] ${
               menuOpen && "open"
-            } flex flex-col`}
+            } flex flex-col gap-4 rounded-2xl`}
           >
-            <div className="menu-header w-full h-16 flex justify-center items-center pl-12 pr-6">
-              <img src="/SeniorSage Logo.webp" alt="logo" />
+            <div className="menu-header w-full h-16 flex justify-center items-center pl-14 pr-6 border-b-[1px]">
+              <img src="/SeniorSage Logo.webp" alt="SeniorSage" loading="lazy" />
             </div>
             <div className="menu-links w-full flex flex-col gap-4 items-start">
               {menu.map((item) => (
@@ -133,10 +141,10 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
+              strokeWidth={2}
               stroke="currentColor"
               className={`menu-btn size-8 hover:cursor-pointer text-black ${
-                menuOpen && "z-[1003]"
+                menuOpen ? "z-[1003]" : "border-2 border-black rounded-full p-1"
               }`}
               onClick={() => toggleMenu()}
             >
@@ -161,8 +169,8 @@ const Navbar = () => {
           <div className="logo-box flex-1 flex justify-start items-center pl-[8.75rem] sm:pl-0 sm:px-1 sm:flex-none flex-grow">
             <img
               src="/SeniorSage Logo.webp"
-              alt="logo"
-              className="min-h-9 min-w-auto min-w-36 hover:cursor-pointer "
+              alt="SeniorSage"
+              className="min-h-9 min-w-36 cursor-pointer "
               onClick={() => window.location.replace("/")}
               draggable={false}
             />

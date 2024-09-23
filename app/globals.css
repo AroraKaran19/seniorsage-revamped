@@ -5,20 +5,28 @@
 /* Custom Fonts */
 
 @font-face {
-    font-family: "Product Sans Regular";
-    src: url("./fonts/ProductSans-Regular.ttf") format("truetype");
+  font-family: "Product Sans Regular";
+  src: url("./fonts/ProductSans-Regular.ttf") format("truetype");
 }
 @font-face {
-    font-family: "Product Sans Bold";
-    src: url("./fonts/ProductSans-Bold.ttf") format("truetype");
+  font-family: "Product Sans Bold";
+  src: url("./fonts/ProductSans-Bold.ttf") format("truetype");
 }
 @font-face {
-    font-family: "Product Sans Italic";
-    src: url("./fonts/ProductSans-Italic.ttf") format("truetype");
+  font-family: "Product Sans Black Regular";
+  src: url("./fonts/ProductSans-Black.ttf") format("truetype");
 }
 @font-face {
-    font-family: "Product Sans Bold Italic";
-    src: url("./fonts/ProductSans-BoldItalic.ttf") format("truetype");
+  font-family: "Product Sans Italic";
+  src: url("./fonts/ProductSans-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Product Sans Bold Italic";
+  src: url("./fonts/ProductSans-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Product Sans Light Italic";
+  src: url("./fonts/ProductSans-LightItalic.ttf") format("truetype");
 }
 
 * {
@@ -30,9 +38,10 @@
 /* Navbar */
 
 .navbar {
-    height: clamp(4rem, 8vw, 7.5rem);
-    transition: all 0.5s ease-in-out;
-    will-change: scroll-position;
+  height: clamp(4rem, 8vw, 7.5rem);
+  transition: all 0.5s ease-in-out;
+  will-change: scroll-position;
+  animation: slideFadeDown 0.5s ease-in-out forwards;
 }
 
 @keyframes slideFadeDown {
@@ -53,7 +62,7 @@
   left: 0;
   right: 0;
   transition: all 0.5s ease-in-out;
-  animation: slideFadeDown 0.5s ease-in-out forwards;
+  /* animation: slideFadeDown 0.5s ease-in-out forwards; */
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   will-change: scroll-position;
 }
@@ -143,19 +152,19 @@
 }
 
 .navbar .authentication-wrapper {
-    padding: clamp(0px, 5vw, 0.4rem) clamp(0.5rem, 5vw, 2rem);
+  padding: clamp(0px, 5vw, 0.4rem) clamp(0.5rem, 5vw, 2rem);
 }
 
 .navbar .authentication-wrapper span {
-    font-family: "Product Sans Regular", sans-serif;
-    font-size: clamp(0rem, 5vw, 2rem);
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(0rem, 5vw, 2rem);
 }
 
 @media (min-width: 321px) and (max-width: 768px) {
-    .navbar {
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-    }
-    .navbar .main-nav .authentication-wrapper {
-        padding: 0;
-    }
+  .navbar {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  }
+  .navbar .main-nav .authentication-wrapper {
+    padding: 0;
+  }
 }

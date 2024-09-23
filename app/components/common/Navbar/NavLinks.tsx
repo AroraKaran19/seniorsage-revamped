@@ -133,7 +133,7 @@ const NavLinks = ({
       </Link>
       {subMenu && (
         <div
-          className={`sub-menu absolute sm:relative sm:left-0 top-full w-max bg-white cursor-default text-black justify-center items-center left-1/2 z-[1004] ${
+          className={`sub-menu absolute sm:relative sm:left-0 top-full sm:top-0 w-max bg-white cursor-default text-black justify-center items-center left-1/2 z-[1004] ${
             subMenuOpen ? "flex flex-wrap" : "hidden"
           }`}
         >
@@ -155,7 +155,7 @@ const NavLinks = ({
                   onClick={() => handleNavClick(true, item.url)}
                   classValue={`sub-menu-item flex justify-center items-center pb-0 ${
                     item.bgImage
-                      ? "text-white hover:text-white/90 sm:rounded-lg"
+                      ? "text-white hover:text-white/95 sm:rounded-lg"
                       : "text-black/30 hover:text-black"
                   }`}
                 />
