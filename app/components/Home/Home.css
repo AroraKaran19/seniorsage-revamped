@@ -1,21 +1,21 @@
 /* Home CSS */
 
-.hero-section .hero-section-1 .hero-section-left p {
+.hero-section .hero-section-header .hero-section-left p {
   font-family: "Product Sans Black Regular", sans-serif;
   font-size: clamp(2rem, 5vw, 5rem);
 }
 
-.hero-section .hero-section-1 .hero-section-right p {
+.hero-section .hero-section-header .hero-section-right p {
   font-family: "Product Sans Light Italic", sans-serif;
   font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
-.hero-section .hero-section-1 .hero-section-right .get-started-btn {
+.hero-section .hero-section-header .hero-section-right .get-started-btn {
   font-family: "Product Sans Regular", sans-serif;
   font-size: clamp(0.5rem, 5vw, 1.5rem);
 }
 
-.hero-section .hero-section-1 .hero-section-right .get-started-btn:hover path {
+.hero-section .hero-section-header .hero-section-right .get-started-btn:hover path {
   d: path(
     "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z"
   );

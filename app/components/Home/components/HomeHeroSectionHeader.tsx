@@ -6,7 +6,7 @@ const HomeHeroSectionHeader = () => {
   return (
     <>
       <div className="hero-section-left flex-1">
-        <p className="uppercase leading-none select-none">
+        <p className="uppercase leading-none select-none break-words">
           Are you up for career boost in seconds?
         </p>
       </div>

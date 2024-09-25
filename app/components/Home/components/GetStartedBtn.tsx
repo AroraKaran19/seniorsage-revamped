@@ -1,16 +1,23 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 const GetStartedBtn = () => {
 
 	const navigate = () => {
     const navbar = document.querySelector(".navbar")?.clientHeight || 0;
-    const section = document.querySelector(".service-cards")?.clientHeight || 0;
+    const section = document.querySelector(".hero-section-service-cards")?.clientHeight || 0;
     window.scrollTo({
       top: section - (navbar + 20),
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <div

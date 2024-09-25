@@ -49,13 +49,23 @@ const NavLinks = ({
   const router = useRouter();
 
   const handleNavClick = (mobile?: boolean, href?: string) => {
-    if (url === currentPath) return;
+    if (url === currentPath) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    };
     if (subMenu && !mobile) {
       setSubMenuOpen(!subMenuOpen);
     } else {
       if (mobileWrapper) {
         mobileWrapper(false); // Closes the mobile menu
       }
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
       router.push(href || url);
     }
   };
@@ -81,7 +91,7 @@ const NavLinks = ({
         currentPath === url || "/" + currentPath.split("/")[1] === url
           ? "text-black"
           : "text-black/30"
-      } ${classValue}`}
+      } ${bgImage ? "rounded-2xl" : ""} ${classValue}`}
       draggable={false}
       style={{
         ...(bgImage
@@ -89,6 +99,7 @@ const NavLinks = ({
               backgroundImage: `url(${bgImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
+              borderBottom: "0px",
             }
           : {}),
         ...(textShadow && windowWidth < 768

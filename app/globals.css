@@ -63,7 +63,7 @@
   right: 0;
   transition: all 0.5s ease-in-out;
   /* animation: slideFadeDown 0.5s ease-in-out forwards; */
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
   will-change: scroll-position;
 }
 
@@ -126,6 +126,10 @@
   }
 }
 
+.navbar .main-nav .logo-box img {
+  height: clamp(1.875rem, 5vw, 2.625rem);
+}
+
 .navbar .main-nav .nav-links {
   padding: clamp(0.25rem, 5vw, 0.5rem) clamp(0.5rem, 5vw, 1.5rem);
 }
@@ -163,6 +167,9 @@
 @media (min-width: 321px) and (max-width: 768px) {
   .navbar {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  }
+  .navbar .authentication-wrapper {
+    padding: clamp(2px, 5vw, 0.5rem) clamp(2rem, 5vw, 3rem);
   }
   .navbar .main-nav .authentication-wrapper {
     padding: 0;
