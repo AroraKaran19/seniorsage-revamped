@@ -21,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="google-site-verification" content="a3Z5a5NXrTu4NLRHPkvwLmINYvIyGMzbtP6TgJdq4Oo" />
       <body
         className={`antialiased max-w-full`}
       >
