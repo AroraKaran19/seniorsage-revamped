@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-interface NavLinksProps {
+export interface NavLinksProps {
   index: number;
   name: string;
   url: string;
@@ -61,11 +61,14 @@ const NavLinks = ({
     } else {
       if (mobileWrapper) {
         mobileWrapper(false); // Closes the mobile menu
+        document.body.style.overflow = "auto";
       }
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, 150);
       router.push(href || url);
     }
   };
@@ -113,7 +116,7 @@ const NavLinks = ({
         className={`${
           bgImage
             ? bgBlur
-              ? "bg-white/30 sm:bg-white/10 backdrop-blur-sm h-full w-full flex justify-center items-center rounded-lg sm:rounded-2xl"
+              ? "bg-white/30 sm:bg-white/10 backdrop-blur-sm h-full w-full flex justify-center items-center rounded-lg sm:rounded-2xl hover:bg-black/20"
               : ""
             : ""
         }`}

@@ -1,5 +1,10 @@
 /* Home CSS */
 
+.hero-section {
+  padding-left: clamp(2rem, 5vw, 8.125rem);
+  padding-right: clamp(2rem, 5vw, 8.125rem);
+}
+
 .hero-section .hero-section-header .hero-section-left p {
   font-family: "Product Sans Black Regular", sans-serif;
   font-size: clamp(2rem, 5vw, 5rem);
@@ -22,5 +27,43 @@
   d: "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z";
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
+.hero-section-service-cards .service-card-1 .double-quotes svg {
+  height: clamp(1.25rem, 5vw, 2.25rem);
+}
+
+.hero-section-service-cards .service-card-1 .service-card-header {
+  font-family: "Product Sans Bold", sans-serif;
+  font-size: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.hero-section-service-cards .service-card-1 .services-provided-wrapper .service {
+  font-family: "Product Sans Bold", sans-serif;
+  font-size: clamp(0.5rem, 5vw, 1.5rem);
+}
+
+.hero-section-service-cards .service-card-1 .services-provided-wrapper .service:last-child {
+  background-color: #8941FF;
+  color: white;
+  border: white 2px solid;
+}
+
+.hero-section-service-cards .service-card-2 .service-card-2-inner .service-card-header {
+  font-family: "Product Sans Bold", sans-serif;
+  font-size: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.hero-section-service-cards .service-card-2 .service-card-2-inner .upload-resume-wrapper:hover {
+  .upload-resume-icon svg path {
+    stroke: white;
+    transition: all 0.7s ease-in-out;
+  }
+}
+
+.hero-section-service-cards .service-card-2 .service-card-2-inner .upload-resume-wrapper .upload-resume-text {
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(0.5rem, 5vw, 2rem);
+}
+
+.hero-section-service-cards .service-card-2 .service-card-2-inner .upload-resume-wrapper .upload-resume-icon svg {
+  height: clamp(2rem, 5vw, 4.875rem);
 }

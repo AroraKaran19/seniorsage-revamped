@@ -5,7 +5,7 @@ const GetStartedBtn = () => {
 
 	const navigate = () => {
     const navbar = document.querySelector(".navbar")?.clientHeight || 0;
-    const section = document.querySelector(".hero-section-service-cards")?.clientHeight || 0;
+    const section = document.querySelector(".service-card-1")?.clientHeight || 0;
     window.scrollTo({
       top: section - (navbar + 20),
       behavior: "smooth",
@@ -21,7 +21,7 @@ const GetStartedBtn = () => {
 
   return (
     <div
-      className="get-started-btn flex gap-3 items-stretch cursor-pointer"
+      className="get-started-btn w-fit flex gap-3 items-stretch cursor-pointer"
       onClick={() => navigate()}
     >
       <span className="leading-none select-none shrink-0 flex items-center">
@@ -30,7 +30,7 @@ const GetStartedBtn = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
-        viewBox="0 0 auto auto"
+        viewBox="0 0 80 24"
         stroke="currentColor"
         className="max-h-6 min-h-[1.125rem] min-w-20 flex justify-start items-start w-fit"
       >

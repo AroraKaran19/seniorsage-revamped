@@ -37,6 +37,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'service-card-2-bg': 'linear-gradient(to left, #E2F0FF 50%, lightblue 50%)',
+      },
+      backgroundSize: {
+        '200-percent': '200%',
+      },
     },
   },
   plugins: [],

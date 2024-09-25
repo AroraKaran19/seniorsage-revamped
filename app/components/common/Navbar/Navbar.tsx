@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import NavLinks from "./NavLinks";
 
-const Navbar = () => {
+const Navbar = React.memo(() => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menu = [
@@ -62,13 +62,13 @@ const Navbar = () => {
     }
   };
 
-  const [isSticky, setIsSticky] = useState<boolean>(false);
+  const [shadow, setShadow] = useState(false);
 
   const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsSticky(true);
+        setShadow(true);
       } else {
-        setIsSticky(false);
+        setShadow(false);
       }
     };
   // const lastScrollY = useRef<number>(0);
@@ -83,6 +83,7 @@ const Navbar = () => {
   // };
 
   useEffect(() => {
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     // Cleanup event listener on component unmount
@@ -92,9 +93,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`navbar z-[2000] bg-white w-full max-w-screen relative ${
-          isSticky ? "sticky" : ""
-        }`}
+        className={`navbar z-[2000] bg-white w-full max-w-screen ${shadow ? "box-shadow" : ""}`}
       >
         {/* Mobile Wrapper */}
         <div
@@ -206,6 +205,6 @@ const Navbar = () => {
       </div>
     </>
   );
-};
+});
 
 export default Navbar;
