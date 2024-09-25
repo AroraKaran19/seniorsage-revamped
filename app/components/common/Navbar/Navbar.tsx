@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import NavLinks from "./NavLinks";
 
-const Navbar = React.memo(() => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menu = [
@@ -205,6 +205,6 @@ const Navbar = React.memo(() => {
       </div>
     </>
   );
-});
+};
 
 export default Navbar;
