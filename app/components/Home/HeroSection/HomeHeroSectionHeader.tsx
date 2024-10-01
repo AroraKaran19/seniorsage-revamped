@@ -1,5 +1,5 @@
 import React from "react";
-import GetStartedBtn from "./GetStartedBtn";
+import GetStartedBtn from "../components/GetStartedBtn";
 
 const HomeHeroSectionHeader = () => {
 

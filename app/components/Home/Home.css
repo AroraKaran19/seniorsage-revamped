@@ -88,7 +88,7 @@
 }
 
 .hero-section-service-cards .service-card-3 {
-  padding-top: clamp(0rem, 5vw, 14.625rem);
+  padding-top: clamp(0rem, 12vw, 14.625rem);
 }
 
 .hero-section-service-cards .service-card-3 .service-card-3-inner {
@@ -109,7 +109,7 @@
 } 
 
 .hero-section-service-cards .service-card-3 .service-card-3-inner .team-images-wrapper .team-member img {
-  height: clamp(3.5rem, 5vw, 4.8rem);
+  height: clamp(3rem, 5vw, 4.8rem);
   aspect-ratio: 1/1;
 }
 
@@ -125,6 +125,14 @@
   d: "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z";
 }
 
+.hero-section-service-cards .service-card-3 .service-card-3-inner:hover .team-images-wrapper .team-member {
+  transform: translateX(0) !important;
+} 
+.hero-section-service-cards .service-card-3 .service-card-3-inner .team-images-wrapper .team-member:hover img {
+  transform: scale(1.1);
+}
+
+/* Smaller Screen */
 @media (max-width: 1024px) {
   .hero-section-service-cards .service-card-1 {
     padding-top: 0;
@@ -147,17 +155,8 @@
 }
 
 
-/* Larger Screens */
-@media (min-width: 1280px) {
-  .hero-section-service-cards .service-card-3 .service-card-3-inner:hover .team-images-wrapper .team-member {
-    transform: translateX(0) !important;
-  } 
-  .hero-section-service-cards .service-card-3 .service-card-3-inner .team-images-wrapper .team-member:hover img {
-    transform: scale(1.1);
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1216px) {
+/* Responsive Fix */
+@media (min-width: 1025px) and (max-width: 1216px) {
   .hero-section-service-cards .service-card-3 .service-card-3-inner .service-card-header .service-container {
       flex-direction: column !important;
   }

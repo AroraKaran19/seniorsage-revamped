@@ -1,6 +1,6 @@
 import React from "react";
-import HomeHeroSectionHeader from "./components/HomeHeroSectionHeader";
-import HomeHeroSectionServiceCards from "./components/HomeHeroSectionServiceCards";
+import HomeHeroSectionHeader from "./HeroSection/HomeHeroSectionHeader";
+import HomeHeroSectionServiceCards from "./HeroSection/HomeHeroSectionServiceCards";
 
 const HomeHeroSection = () => {
   return (
