@@ -1,9 +1,9 @@
 import DoubleQuotesSVG from "@/public/DoubleQuotesSVG";
 import React from "react";
-import ServiceLink from "../components/ServiceLink";
-import UploadResumeBtn from "../components/UploadResumeBtn";
-import TeamImages from "../components/TeamImages";
-import MeetTeamBtn from "../components/MeetTeamBtn";
+import ServiceLink from "./components/ServiceLink";
+import UploadResumeBtn from "./components/UploadResumeBtn";
+import TeamImages from "./components/TeamImages";
+import MeetTeamBtn from "./components/MeetTeamBtn";
 
 const HomeHeroSectionServiceCards = () => {
   const servicesProvided = [
