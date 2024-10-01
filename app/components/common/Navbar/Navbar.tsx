@@ -93,7 +93,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`navbar z-[2000] bg-white w-full max-w-screen ${shadow ? "box-shadow" : ""}`}
+        className={`navbar z-[2000] bg-white w-full max-w-full ${shadow ? "box-shadow" : ""}`}
       >
         {/* Mobile Wrapper */}
         <div

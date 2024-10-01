@@ -18,12 +18,12 @@ const UploadResumeBtn = () => {
 
   return (
     <>
-      <div onClick={() => handleClick()} className="upload-resume-wrapper flex gap-6 justify-center w-full h-full mt-[18.375rem] bg-service-card-2-bg bg-right bg-200-percent hover:bg-left text-[#4C9FFF] hover:text-white transition-all duration-700 ease-in-out rounded-[2.8rem] px-[3.625rem] cursor-pointer py-16 sm:rounded-xl sm:mt-0 sm:p-1 sm:absolute sm:right-5 sm:w-fit sm:h-fit sm:bottom-5">
+      <div onClick={() => handleClick()} className="upload-resume-wrapper flex gap-6 justify-center w-full h-full bg-service-card-2-bg bg-right bg-200-percent hover:bg-left text-[#4C9FFF] hover:text-white transition-all duration-700 ease-in-out rounded-[2.8rem] cursor-pointer sm:rounded-xl sm:mt-0 sm:absolute sm:right-5 sm:w-fit sm:h-fit sm:bottom-5">
             <div className="upload-resume-text flex-1 flex flex-col justify-center flex-wrap sm:hidden">
               <p>Upload your</p>
               <p>resume here</p>
             </div>
-            <div className="upload-resume-icon flex-none flex justify-end items-center ">
+            <div className="upload-resume-icon flex-none flex justify-end items-center">
               <svg
                 viewBox="0 0 79 78"
                 fill="none"
