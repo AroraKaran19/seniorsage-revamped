@@ -155,7 +155,7 @@
 }
 
 .what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-logo img {
-  height: clamp(2rem, 5vw, 4.5rem);
+  height: clamp(2rem, 5vw, 3.5rem);
 }
 
 .what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-info .feature-name {
