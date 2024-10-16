@@ -154,6 +154,10 @@
   transform: translateY(28%);
 }
 
+.what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-logo img {
+  height: clamp(2rem, 5vw, 4.5rem);
+}
+
 .what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-info .feature-name {
   font-family: "Product Sans Black", sans-serif;
   font-size: clamp(1.25rem, 3vw, 2.5rem);
@@ -180,6 +184,7 @@
   .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
     transform: translateY(0%);
     align-items: center;
+    justify-content: center;
   }
   .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
     transform: translateY(0%);

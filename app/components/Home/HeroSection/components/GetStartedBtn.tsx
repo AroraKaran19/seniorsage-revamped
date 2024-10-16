@@ -21,7 +21,7 @@ const GetStartedBtn = () => {
 
   return (
     <div
-      className="get-started-btn w-fit flex gap-3 items-stretch cursor-pointer"
+      className="get-started-btn w-max flex gap-3 items-stretch cursor-pointer"
       onClick={() => navigate()}
     >
       <span className="leading-none select-none shrink-0 flex items-center">

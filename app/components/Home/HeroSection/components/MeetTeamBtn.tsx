@@ -21,7 +21,7 @@ const MeetTeamBtn = () => {
         className="service-card-header h-full cursor-pointer flex flex-wrap"
         onClick={() => navigate()}
       >
-        <div className="service-card-container flex gap-2 h-full items-end">
+        <div className="service-card-container flex gap-2 w-full h-full items-end">
           <p className="text-white leading-none flex flex-wrap">
             Meet our team
           </p>
