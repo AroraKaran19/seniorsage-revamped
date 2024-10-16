@@ -17,10 +17,14 @@
 
 .text-header .hero-section-right .get-started-btn {
   font-family: "Product Sans Regular", sans-serif;
-  font-size: clamp(0.5rem, 4vw, 1.5rem);
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
 }
 
-.text-header .hero-section-right .get-started-btn:hover path {
+.text-header .hero-section-right .get-started-btn svg {
+  height: clamp(1.25rem, 4vw, 1.5rem);
+}
+
+.text-header .hero-section-right .get-started-btn:hover svg path {
   d: path(
     "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z"
   );
@@ -122,7 +126,11 @@
   font-size: clamp(1.25rem, 3vw, 2rem);
 }
 
-.hero-section-service-cards .service-card-3 .service-card-3-inner:hover .service-card-header path {
+.hero-section-service-cards .service-card-3 .service-card-3-inner .service-card-header svg {
+  height: clamp(1.25rem, 3vw, 2rem);
+}
+
+.hero-section-service-cards .service-card-3 .service-card-3-inner:hover .service-card-header svg path {
   d: path(
     "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z"
   );
