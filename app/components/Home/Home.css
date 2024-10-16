@@ -150,6 +150,10 @@
   padding-top: clamp(1rem, 5vw, 10.813rem);
 }
 
+.what-we-do .what-we-do-feature-cards .feature-card .feature-number {
+  font-family: "Product Sans Regular", sans-serif;
+}
+
 .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
   transform: translateY(28%);
 }
