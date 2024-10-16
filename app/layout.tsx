@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/common/Navbar/Navbar";
+import Footer from "./components/common/Footer/Footer";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -26,9 +27,10 @@ export default function RootLayout({
         className={`antialiased max-w-full`}
       >
         <Navbar />
-        <main className="min-h-screen">
+        <main className="min-h-screen max-w-full overflow-x-hidden">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

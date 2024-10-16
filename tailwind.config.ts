@@ -39,6 +39,7 @@ const config: Config = {
       },
       backgroundImage: {
         'service-card-2-bg': 'linear-gradient(to left, #E2F0FF 50%, lightblue 50%)',
+        'footer-get-started-bg': 'linear-gradient(to left, #3A3A3A 50%, #4b4b4b 50%)',
       },
       backgroundSize: {
         '200-percent': '200%',

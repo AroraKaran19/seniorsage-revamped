@@ -30,8 +30,7 @@
 }
 
 * {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 1) white;
+  scrollbar-color: rgba(0, 0, 0, 0.6) rgba(0, 0, 0, 0.4);
   scroll-behavior: smooth;
 }
 
@@ -161,6 +160,36 @@
 .navbar .authentication-wrapper span {
   font-family: "Product Sans Regular", sans-serif;
   font-size: clamp(0rem, 5vw, 2rem);
+}
+
+/* Footer */
+
+.footer .footer-header {
+  padding: clamp(2rem, 5vw, 5.5rem) clamp(2rem, 5vw, 7.875rem) clamp(2rem, 5vw, 4.75rem) clamp(2rem, 7vw, 8rem);
+}
+
+.footer .footer-header .footer-header-text {
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.footer .footer-header .footer-header-btns .footer-get-started-btn {
+  padding: clamp(0px, 5vw, 10px) clamp(0px, 5vw, 35px);
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.footer .footer-header .footer-header-btns .footer-get-started-btn:hover span {
+  text-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.5);
+}
+
+.footer .footer-header .footer-header-btns .footer-contact-us-btn {
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.footer .footer-header .footer-header-btns .footer-contact-us-btn:hover {
+  text-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 321px) and (max-width: 768px) {

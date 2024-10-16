@@ -152,6 +152,7 @@
 
 .what-we-do .what-we-do-feature-cards .feature-card .feature-number {
   font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(15rem, 65vw, 41rem);
 }
 
 .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
@@ -185,6 +186,10 @@
   .hero-section-service-cards .service-card-3 {
     padding-top: 0;
   }
+  .what-we-do .what-we-do-feature-cards .feature-card .feature-number {
+    font-family: "Product Sans Regular", sans-serif;
+    font-size: clamp(15rem, 65vw, 18rem);
+  }
   .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
     transform: translateY(0%);
     align-items: center;
@@ -193,7 +198,6 @@
   .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
     transform: translateY(0%);
   }
-
 }
 
 
