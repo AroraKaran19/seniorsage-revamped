@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://seniorsage-revamped.vercel.app/</loc>
-        <lastmod>2024-09-26</lastmod>
+        <lastmod>2024-10-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://seniorsage-revamped.vercel.app/services/</loc>
-        <lastmod>2024-09-26</lastmod>
+        <lastmod>2024-10-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://seniorsage-revamped.vercel.app/services/github-analysis</loc>
-        <lastmod>2024-09-26</lastmod>
+        <lastmod>2024-10-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://seniorsage-revamped.vercel.app/services/resume-analysis</loc>
-        <lastmod>2024-09-26</lastmod>
+        <lastmod>2024-10-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://seniorsage-revamped.vercel.app/services/course-recommendation</loc>
-        <lastmod>2024-09-26</lastmod>
+        <lastmod>2024-10-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>1.0</priority>
     </url>

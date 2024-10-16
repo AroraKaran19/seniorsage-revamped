@@ -49,7 +49,7 @@ const NavLinks = ({
   const router = useRouter();
 
   const handleNavClick = (mobile?: boolean, href?: string) => {
-    if (url === currentPath) {
+    if (url === currentPath ) {
       window.scrollTo({
         top: 0,
         behavior: "smooth",

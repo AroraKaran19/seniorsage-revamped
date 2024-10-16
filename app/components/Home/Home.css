@@ -5,26 +5,30 @@
   padding-right: clamp(2rem, 5vw, 8.125rem);
 }
 
-.hero-section .hero-section-header .hero-section-left p {
+.text-header .hero-section-left p {
   font-family: "Product Sans Black Regular", sans-serif;
   font-size: clamp(2rem, 4vw, 5rem);
 }
 
-.hero-section .hero-section-header .hero-section-right p {
+.text-header .hero-section-right p {
   font-family: "Product Sans Light Italic", sans-serif;
   font-size: clamp(1.2rem, 4vw, 2rem);
 }
 
-.hero-section .hero-section-header .hero-section-right .get-started-btn {
+.text-header .hero-section-right .get-started-btn {
   font-family: "Product Sans Regular", sans-serif;
   font-size: clamp(0.5rem, 4vw, 1.5rem);
 }
 
-.hero-section .hero-section-header .hero-section-right .get-started-btn:hover path {
+.text-header .hero-section-right .get-started-btn:hover path {
   d: path(
     "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z"
   );
   d: "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z";
+}
+
+.hero-section-service-cards .service-card-1, .hero-section-service-cards .service-card-2, .hero-section-service-cards .service-card-3 {
+  box-shadow: 0px 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .hero-section-service-cards .service-card-1 {
@@ -132,6 +136,27 @@
   transform: scale(1.1);
 }
 
+.what-we-do {
+  padding: 0 clamp(2rem, 5vw, 8.125rem);
+  padding-top: clamp(1rem, 5vw, 10.813rem);
+}
+
+.what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
+  transform: translateY(28%);
+}
+
+.what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-info .feature-name {
+  font-family: "Product Sans Black", sans-serif;
+  font-size: clamp(1.35rem, 3vw, 2.5rem);
+  text-transform: uppercase;
+}
+
+.what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-info .feature-desc {
+  font-family: "Product Sans Light", sans-serif;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  color: rgba(0, 0, 0, 0.5);
+}
+
 /* Smaller Screen */
 @media (max-width: 1024px) {
   .hero-section-service-cards .service-card-1 {
@@ -143,12 +168,21 @@
   .hero-section-service-cards .service-card-3 {
     padding-top: 0;
   }
+  .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
+    transform: translateY(0%);
+    align-items: center;
+  }
+  .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
+    transform: translateY(0%);
+  }
+
 }
 
 
 /* Medium Screens */
 @media (min-width: 769px) and (max-width: 1024px) { 
-  .hero-section {
+  .hero-section, 
+  .what-we-do {
     padding-left: clamp(5rem, 5vw, 8.125rem);
     padding-right: clamp(5rem, 5vw, 8.125rem);
   }
@@ -182,6 +216,41 @@
     }
     .team-member:nth-child(4) {
       transform: translateX(0) translateY(0);
+    }
+  }
+
+
+  .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
+    transform: translateY(13%);
+  }
+  .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
+    transform: translateY(8%);
+  }
+}
+
+@media (min-width: 1217px) and (max-width: 1700px) {
+  .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
+    transform: translateY(30%);
+  }
+  .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
+    transform: translateY(20%);
+  }
+
+  @media (max-width: 1635px) {
+    .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
+      transform: translateY(25%);
+    }
+    .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
+      transform: translateY(16%);
+    }
+  }
+
+  @media (max-width: 1406px) {
+    .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
+      transform: translateY(20%);
+    }
+    .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
+      transform: translateY(13%);
     }
   }
 }
