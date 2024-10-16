@@ -30,7 +30,7 @@ const MeetTeamBtn = () => {
             fill="none"
             viewBox="0 0 80 24"
             stroke="white"
-            className="min-w-20 flex w-fit"
+            className="min-w-20 flex w-fit sm:min-w-0"
           >
             <path
               className="h-full flex place-self-start transition-all duration-700 ease-in-out"

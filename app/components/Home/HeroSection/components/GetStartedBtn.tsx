@@ -32,7 +32,7 @@ const GetStartedBtn = () => {
         fill="none"
         viewBox="0 0 80 24"
         stroke="currentColor"
-        className="min-w-20 flex justify-start items-start w-max"
+        className="min-w-20 flex justify-start items-start w-min sm:min-w-0"
       >
         <path
           className="flex place-self-start transition-all duration-300 ease-in-out"

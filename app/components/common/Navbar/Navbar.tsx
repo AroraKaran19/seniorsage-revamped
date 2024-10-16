@@ -20,7 +20,7 @@ const Navbar = () => {
           items: [
             {
               index: 1,
-              name: "Github Ananlysis",
+              name: "Github Analysis",
               url: "/services/github-analysis",
               bgImage: "/github.webp",
               bgBlur: true,
@@ -30,7 +30,7 @@ const Navbar = () => {
               index: 2,
               name: "Resume Analysis",
               url: "/services/resume-analysis",
-              bgImage: "/resume.webp",
+              bgImage: "/resume.jpeg",
               bgBlur: true,
               textShadow: true,
             },
@@ -38,7 +38,7 @@ const Navbar = () => {
               index: 3,
               name: "Course Recommendation",
               url: "/services/course-recommendation",
-              bgImage: "/course.webp",
+              bgImage: "/course.jpeg",
               bgBlur: true,
               textShadow: true,
             },

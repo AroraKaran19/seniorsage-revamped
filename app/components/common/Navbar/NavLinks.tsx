@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 export interface NavLinksProps {
@@ -44,7 +44,6 @@ const NavLinks = ({
   textShadow,
 }: NavLinksProps) => {
   const currentPath = usePathname();
-  const [windowWidth, setWindowWidth] = useState(0);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const router = useRouter();
 
@@ -73,17 +72,6 @@ const NavLinks = ({
     }
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <div
       tabIndex={index}
@@ -105,8 +93,8 @@ const NavLinks = ({
               borderBottom: "0px",
             }
           : {}),
-        ...(textShadow && windowWidth < 768
-          ? { textShadow: "0.5px 0.25px black" }
+        ...(textShadow
+          ? { textShadow: "2px 0.5px black" }
           : {}),
       }}
     >
@@ -116,7 +104,7 @@ const NavLinks = ({
         className={`${
           bgImage
             ? bgBlur
-              ? "bg-white/30 sm:bg-white/10 backdrop-blur-sm h-full w-full flex justify-center items-center rounded-lg sm:rounded-2xl hover:bg-black/20"
+              ? "bg-white/30 sm:bg-white/10 backdrop-blur-sm h-full w-full flex justify-center items-center rounded-lg sm:rounded-xl hover:bg-black/20"
               : ""
             : ""
         }`}
@@ -169,7 +157,7 @@ const NavLinks = ({
                   onClick={() => handleNavClick(true, item.url)}
                   classValue={`sub-menu-item flex justify-center items-center pb-0 ${
                     item.bgImage
-                      ? "text-white hover:text-white/95 sm:rounded-lg"
+                      ? "text-white hover:text-white/90 sm:rounded-lg"
                       : "text-black/30 hover:text-black"
                   }`}
                 />

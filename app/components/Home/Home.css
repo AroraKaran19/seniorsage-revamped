@@ -22,6 +22,7 @@
 
 .text-header .hero-section-right .get-started-btn svg {
   height: clamp(1.25rem, 4vw, 1.5rem);
+  max-width: min-content;
 }
 
 .text-header .hero-section-right .get-started-btn:hover svg path {
@@ -155,13 +156,13 @@
 
 .what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-info .feature-name {
   font-family: "Product Sans Black", sans-serif;
-  font-size: clamp(1.35rem, 3vw, 2.5rem);
+  font-size: clamp(1.25rem, 3vw, 2.5rem);
   text-transform: uppercase;
 }
 
 .what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-info .feature-desc {
   font-family: "Product Sans Light", sans-serif;
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   color: rgba(0, 0, 0, 0.5);
 }
 
