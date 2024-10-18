@@ -56,7 +56,7 @@ const Footer = () => {
               />
             </div>
             <div className="footer-seniorsage-desc text-white/30 flex sm:justify-center sm:text-center">
-              We don't sell unrealistic dreams - but surely will help you hit
+              We don&apos;t sell unrealistic dreams - but surely will help you hit
               your highest potential!
             </div>
           </div>
