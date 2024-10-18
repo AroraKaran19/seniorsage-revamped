@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import NavLinks from "./NavLinks";
+import SeniorSageLogo from "../SeniorSageLogo";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -110,7 +111,7 @@ const Navbar = () => {
             } flex flex-col gap-4 rounded-tr-2xl rounded-br-2xl`}
           >
             <div className="menu-header w-full h-16 flex justify-center items-center pl-14 pr-6 border-b-[1px]">
-              <img src="/SeniorSage Logo.webp" alt="SeniorSage" loading="lazy" />
+              <img src="/SeniorSage Logo.webp" alt="SeniorSage" />
             </div>
             <div className="menu-links w-full flex flex-col gap-4 items-start">
               {menu.map((item) => (
@@ -131,9 +132,9 @@ const Navbar = () => {
         </div>
 
         {/* Main Navbar */}
-        <div className="main-nav w-full h-full flex max-w-full">
+        <div className="main-nav w-full h-full flex max-w-full gap-6">
           <div
-            className="hamburger-menu hidden sm:flex sm:flex-1 justify-start items-center mx-2 md:pl-10 sm:pl-2 select-none"
+            className={`hamburger-menu hidden sm:flex sm:flex-1 justify-start items-center select-none ${menuOpen ? "md:mx-2 p-3" : "md:mx-8"}`}
             draggable={false}
           >
             <svg
@@ -168,21 +169,15 @@ const Navbar = () => {
               )}
             </svg>
           </div>
-          <div className="logo-box flex-1 flex justify-start items-center pl-[8.75rem] sm:pl-0 sm:px-1 sm:flex-none flex-grow">
-            <img
-              src="/SeniorSage Logo.webp"
-              alt="SeniorSage"
-              className="min-w-36 cursor-pointer "
-              onClick={() => window.location.replace("/")}
-              draggable={false}
-            />
+          <div className="logo-box flex-1 flex justify-start items-center sm:flex-none flex-grow">
+            <SeniorSageLogo className="cursor-pointer" onClick={() => window.location.replace("/")} />
           </div>
           <div className="nav-links flex-none sm:hidden flex justify-center items-center gap-16 flex-wrap flex-shrink-0">
             {menu.map((item) => (
               <NavLinks key={item.index} {...item} classValue="pb-2" />
             ))}
           </div>
-          <div className="authentication-btn flex-1 flex justify-end items-center pr-[7.75rem] md:pr-10 sm:px-2 sm:pr-4 flex-grow select-none">
+          <div className="authentication-btn flex-1 flex justify-end items-center sm:px-2 flex-grow select-none">
             <div className="authentication-wrapper flex justify-center items-center rounded-full bg-black hover:bg-black/80 text-white cursor-pointer sm:bg-transparent sm:text-black sm:p-0">
               <span className="sm:hidden">Register</span>
               <svg

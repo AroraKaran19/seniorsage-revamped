@@ -28,6 +28,10 @@
   font-family: "Product Sans Light Italic";
   src: url("./fonts/ProductSans-LightItalic.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Product Sans Light";
+  src: url("./fonts/ProductSans-Light.ttf") format("truetype");
+}
 
 * {
   scrollbar-color: rgba(0, 0, 0, 0.6) rgba(0, 0, 0, 0.4);
@@ -101,7 +105,7 @@
 }
 
 .navbar .nav-wrapper .menu-container .menu-links {
-  padding: clamp(1rem, 5vw, 2rem);
+  padding: clamp(1rem, 5vw, 2rem) clamp(1rem, 6vw, 8.75rem);
 }
 
 .navbar .nav-wrapper .menu-container .menu-links .sub-menu {
@@ -124,8 +128,13 @@
   }
 }
 
-.navbar .main-nav .logo-box img {
-  height: clamp(1.875rem, 5vw, 2.625rem);
+.navbar .main-nav .logo-box {
+  padding-left: clamp(0.5rem, 5vw, 8.75rem);
+}
+
+.navbar .main-nav .logo-box .seniorsage-logo {
+  height: clamp(12px, 10vw, 42px);
+  width: clamp(150px, 25vw, 208px);
 }
 
 .navbar .main-nav .nav-links {
@@ -153,6 +162,10 @@
   background-color: rgba(138, 79, 79, 0.04);
 }
 
+.navbar .main-nav .authentication-btn {
+  padding-right: clamp(0.5rem, 5vw, 7.75rem);
+}
+
 .navbar .authentication-wrapper {
   padding: clamp(0px, 5vw, 0.4rem) clamp(0.5rem, 5vw, 2rem);
 }
@@ -160,6 +173,10 @@
 .navbar .authentication-wrapper span {
   font-family: "Product Sans Regular", sans-serif;
   font-size: clamp(0rem, 5vw, 2rem);
+}
+
+.navbar .main-nav .hamburger-menu {
+  padding-left: clamp(0.25rem, 5vw, 8.75rem);
 }
 
 /* Footer */
@@ -174,9 +191,9 @@
 }
 
 .footer .footer-header .footer-header-btns .footer-get-started-btn {
-  padding: clamp(0px, 5vw, 10px) clamp(0px, 5vw, 35px);
+  padding: clamp(0px, 4vw, 10px) clamp(0px, 4vw, 35px);
   font-family: "Product Sans Regular", sans-serif;
-  font-size: clamp(1.25rem, 5vw, 2.5rem);
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
 }
 
 .footer .footer-header .footer-header-btns .footer-get-started-btn:hover span {
@@ -192,6 +209,36 @@
   text-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.5);
 }
 
+.footer .footer-content {
+  padding: clamp(0.5rem, 5vw, 4.125rem) clamp(0.5rem, 6vw, 8rem);
+}
+
+.footer .footer-content .footer-content-left .footer-logo .seniorsage-logo {
+  height: clamp(12px, 10vw, 74px);
+  width: clamp(200px, 20vw, 364px);
+}
+
+.footer .footer-content .footer-content-left .footer-seniorsage-desc {
+  font-family: "Product Sans Light", sans-serif;
+  font-size: clamp(1rem, 3vw, 1.75rem);
+}
+
+.footer .footer-content .footer-content-right .footer-links .footer-link-section .footer-link-section-head {
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(1.25rem, 5vw, 2rem);
+}
+
+.footer .footer-content .footer-content-right .footer-links .footer-link-section .footer-link-section-link {
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
+
+.footer .footer-bottom {
+  height: clamp(2.5rem, 5vw, 4.5rem);
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
+
 @media (min-width: 321px) and (max-width: 768px) {
   .navbar {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
@@ -201,5 +248,11 @@
   }
   .navbar .main-nav .authentication-wrapper {
     padding: 0;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 1024px) { 
+  .navbar .main-nav .logo-box {
+    padding: 0 1rem;
   }
 }
