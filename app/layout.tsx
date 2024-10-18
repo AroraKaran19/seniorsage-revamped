@@ -27,7 +27,7 @@ export default function RootLayout({
         className={`antialiased max-w-full`}
       >
         <Navbar />
-        <main className="min-h-screen max-w-full overflow-x-hidden">
+        <main className="min-h-screen max-w-full overflow-x-hidden max-h-full">
           {children}
         </main>
         <Footer />
