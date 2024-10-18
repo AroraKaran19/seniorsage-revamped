@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seniorsage-revamped.vercel.app/sitemap.xml
