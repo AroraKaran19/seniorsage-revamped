@@ -14,7 +14,7 @@ const SearchBtn = ({
         search.length > 0
           ? "opacity-100 bg-green-300 cursor-pointer translate-x-full"
           : "opacity-0 -translate-x-0" 
-      } absolute p-2 rounded-lg -right-5 sm:static sm:right-0`}
+      } absolute p-2 rounded-lg -right-5 sm:static sm:translate-x-0`}
       onClick={(e) => clickFn(e)}
     >
       {search.length > 0 && (
