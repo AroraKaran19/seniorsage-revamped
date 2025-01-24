@@ -1,3 +1,9 @@
+# *
 User-agent: *
 Allow: /
-Sitemap: https://seniorsage-revamped.vercel.app/sitemap.xml
+
+# Host
+Host: https://seniorsage.vercel.app
+
+# Sitemaps
+Sitemap: https://seniorsage.vercel.app/sitemap.xml

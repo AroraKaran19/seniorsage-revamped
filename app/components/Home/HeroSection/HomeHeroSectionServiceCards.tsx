@@ -1,9 +1,9 @@
-import DoubleQuotesSVG from "@/public/DoubleQuotesSVG";
 import React from "react";
 import ServiceLink from "./components/ServiceLink";
 import UploadResumeBtn from "./components/UploadResumeBtn";
 import TeamImages from "./components/TeamImages";
 import MeetTeamBtn from "./components/MeetTeamBtn";
+import Quote from "../../common/Svgs/Quote";
 
 const HomeHeroSectionServiceCards = () => {
   const servicesProvided = [
@@ -29,19 +29,14 @@ const HomeHeroSectionServiceCards = () => {
     <>
       <div className="service-card service-card-1 flex-1 min-h-[31.375rem] rounded-[3rem] bg-[#EADEFE] sm:pt-0 sm:h-max sm:min-h-0 sm:w-full sm:rounded-2xl">
         <div className="service-card-1-inner flex flex-col h-full w-full rounded-[2.8rem] bg-[#8941FF] sm:rounded-2xl">
-          <DoubleQuotesSVG />
+          <Quote />
           <div className="service-card-header flex flex-col w-full pt-[1.125rem] pb-8 leading-none text-white sm:pt-2 sm:pb-4">
             <p>For Juniors</p>
             <p>From Seniors</p>
           </div>
-          <div className="services-provided-wrapper flex flex-wrap w-full items-stretch gap-3 pt-5 sm:flex-col">
+          <div className="services-provided-wrapper flex flex-wrap w-full gap-3 pt-5 sm:flex-col">
             {servicesProvided.map((service, index) => (
-              <div
-                key={index}
-                className="service flex text-[#8941FF] py-2 px-[1.125rem] bg-white rounded-2xl cursor-pointer w-max sm:w-full sm:justify-center"
-              >
-                <ServiceLink name={service.name} url={service.url} />
-              </div>
+              <ServiceLink key={index} name={service.name} url={service.url} />
             ))}
           </div>
         </div>

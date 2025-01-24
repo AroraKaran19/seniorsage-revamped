@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/common/Navbar/Navbar";
 import Footer from "./components/common/Footer/Footer";
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
+import AlertWrapper from "./wrappers/AlertWrapper";
+import AuthWrapper from "./wrappers/AuthWrapper";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "SeniorSage - Your Virtual Senior",
@@ -22,15 +18,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta name="google-site-verification" content="a3Z5a5NXrTu4NLRHPkvwLmINYvIyGMzbtP6TgJdq4Oo" />
-      <body
-        className={`antialiased max-w-full`}
-      >
-        <Navbar />
-        <main className="min-h-screen max-w-full overflow-x-hidden max-h-full">
-          {children}
-        </main>
-        <Footer />
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="a3Z5a5NXrTu4NLRHPkvwLmINYvIyGMzbtP6TgJdq4Oo"
+        />
+      </Head>
+      <body className={`antialiased max-w-full`}>
+        <AuthWrapper>
+          <Navbar />
+          <AlertWrapper>
+            <main className="min-h-screen max-w-full overflow-x-hidden max-h-full">
+              {children}
+            </main>
+          </AlertWrapper>
+          <Footer />
+        </AuthWrapper>
       </body>
     </html>
   );

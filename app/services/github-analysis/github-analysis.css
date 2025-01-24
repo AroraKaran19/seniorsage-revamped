@@ -1,0 +1,308 @@
+/* Github Analysis Page */
+
+.github-analysis-page {
+    padding: clamp(2rem, 15vw, 8rem) clamp(2rem, 8vw, 8.125rem) clamp(2rem, 5vw, 5rem) clamp(2rem, 8vw, 8.125rem);
+    font-family: "Product Sans Regular", sans-serif;
+}
+
+.github-analysis-page h1 {
+    font-family: "Product Sans Black", sans-serif;
+    font-size: clamp(2rem,5vw,5rem);
+}
+
+.github-analysis-page .quote-svg {
+    width: clamp(1rem, 5vw, 3rem);
+    height: auto;
+    aspect-ratio: 1/1;
+    margin-top: 1rem;
+}
+
+.github-analysis-page .head-message {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    margin-top: 1rem;
+}
+
+@keyframes ImagePullDown {
+	0% {
+		transform: translateY(-2rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInFromLeft {
+	0% {
+		transform: translateX(-2rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.github-analysis-page .heading-content-left {
+	animation: fadeInFromLeft 1s ease-in-out forwards;
+}
+
+.github-analysis-page .user-github-profile-photo {
+    
+    img {
+        width: clamp(8rem, 15vw, 16rem);
+		opacity: 0;
+		animation: ImagePullDown 1s ease-in-out forwards;
+    }
+
+    .user-username {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        font-family: "Product Sans Bold", sans-serif;
+		opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+
+		a::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 0;
+			height: 2px;
+			margin-top: 0.5rem;
+			background-color: black;
+			transition: all 0.5s ease-in-out;
+		}
+
+		a:hover::before {
+			width: 100%;
+		}
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+.github-analysis-page .head-message .loading_text_dots p {
+    transition: all 0.5s ease-in-out;
+}
+
+.github-analysis-page .head-message .loading_text_dots p:nth-child(1) {
+    animation: blink 2s infinite 1s;
+}
+.github-analysis-page .head-message .loading_text_dots p:nth-child(2) {
+    animation: blink 2s infinite 1.5s;
+}
+.github-analysis-page .head-message .loading_text_dots p:nth-child(3) {
+    animation: blink 2s infinite 1.75s;
+}
+
+.github-analysis-page .head-message p.text {
+    animation: fadeIn 1s ease-in-out forwards;
+    transition: all 0.5s ease-in-out;
+}
+
+.github-analysis-page .analysis-para-wrapper {
+    margin-top: clamp(1rem, 5vw, 2rem);
+	transition: all 0.5s ease-in-out;
+}
+
+.github-analysis-page .analysis-para-wrapper .analysis-para {
+    font-family: "Product Sans Bold", sans-serif;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+@keyframes fadeInFromTop {
+	0% {
+		transform: translateY(-2rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.github-analysis-page .analysis-para-wrapper .analysis-para:nth-child(1) {
+	animation: fadeInFromTop 1s ease-in-out forwards;
+}
+.github-analysis-page .analysis-para-wrapper .analysis-para:nth-child(2) {
+	animation: fadeInFromTop 1s ease-in-out forwards 0.5s;
+}
+.github-analysis-page .analysis-para-wrapper .analysis-para:nth-child(3) {
+	animation: fadeInFromTop 1s ease-in-out forwards 1s;
+}
+.github-analysis-page .analysis-para-wrapper .analysis-para:nth-child(4) {
+	animation: fadeInFromTop 1s ease-in-out forwards 1.5s;
+}
+
+.github-analysis-page .analyse-btn {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+	opacity: 0;
+	animation: fadeIn 1s ease-in-out forwards 2s;
+	transition: all 0.5s ease-in-out;
+}
+.github-analysis-page .analyse-show-wrapper {
+	margin-top: clamp(2rem, 5vw, 4rem);
+	gap: clamp(2rem, 5vw, 4rem);
+}
+
+.github-analysis-page .analyse-show-wrapper .repository-wrapper .repository-wrapper-left-side,
+.github-analysis-page .analyse-show-wrapper .repository-wrapper .repository-wrapper-right-side {
+    padding: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.25rem, 3vw, 3.5rem);
+    font-family: "Product Sans Bold";
+    color: white;
+}
+
+@keyframes takeRepoWrapperLeft {
+	0% {
+		transform: translateX(93%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.github-analysis-page .analyse-show-wrapper .repository-wrapper .repository-wrapper-left-side {
+	position: relative;
+	transform: translateX(93%);
+	animation: takeRepoWrapperLeft 1s ease-in-out forwards;
+	transition: all 0.5s ease-in-out;
+
+}
+
+@keyframes takeRepoWrapperRight {
+	0% {
+		transform: translateX(-93%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes comeFromInside {
+	0% {
+		transform: scale(0.4);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+
+.github-analysis-page .analyse-show-wrapper .repository-wrapper .repository-wrapper-right-side {
+	position: relative;
+	transform: translateX(-93%);
+	animation: takeRepoWrapperRight 1s ease-in-out forwards;
+	transition: all 0.5s ease-in-out;
+
+	.view-icon svg {
+		height: clamp(1.5rem, 10vw, 13rem);
+		aspect-ratio: 1/1;
+		animation: comeFromInside 0.5s ease-in-out forwards;
+	}
+}
+
+.github-analysis-page .analyse-show-wrapper .language-wrapper .language-wrapper-left-side,
+.github-analysis-page .analyse-show-wrapper .language-wrapper .language-wrapper-right-side {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    padding: clamp(2rem, 5vw, 3rem);
+    font-family: "Product Sans Bold";
+    color: white;
+}
+.github-analysis-page .analyse-show-wrapper .language-wrapper .language-wrapper-left-side .known-languages .languages,
+.github-analysis-page .analyse-show-wrapper .language-wrapper .language-wrapper-left-side .recommended-languages .languages {
+    margin-top: clamp(1rem, 5vw, 2rem);
+}
+.github-analysis-page .analyse-show-wrapper .language-wrapper .language-wrapper-left-side .known-languages .language-container,
+.github-analysis-page .analyse-show-wrapper .language-wrapper .language-wrapper-left-side .recommended-languages .language-container {
+    font-size: clamp(1.25rem, 3vw, 1.4rem);
+}
+
+.github-analysis-page .analyse-show-wrapper .career-wrapper .career-wrapper-left-side,
+.github-analysis-page .analyse-show-wrapper .career-wrapper .career-wrapper-right-side {
+	font-size: clamp(1.5rem, 5vw, 2.25rem);
+	padding: clamp(2rem, 5vw, 3rem);
+	font-family: "Product Sans Bold";
+	color: white;
+}
+
+.github-analysis-page .analyse-show-wrapper .career-wrapper .career-wrapper-left-side {
+
+	.show-career-recommendation-wrapper {
+		padding: clamp(0.5rem, 5vw, 1rem) clamp(0.5rem, 5vw, 2rem);
+		font-size: clamp(2rem, 5vw, 4rem);
+		line-height: 1.2;
+	}
+}
+
+
+/* No Github CSS */
+
+.github-find-user-page {
+	padding: clamp(2rem, 15vw, 8rem) clamp(2rem, 8vw, 8.125rem) clamp(2rem, 5vw, 5rem) clamp(2rem, 8vw, 8.125rem);
+	font-family: "Product Sans Regular", sans-serif;
+}
+
+.github-find-user-page h1 {
+	font-family: "Product Sans Black", sans-serif;
+	font-size: clamp(2rem,5vw,5rem);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-0.5rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.github-find-user-page .github-find-user-content .connect-github:hover {
+	.element-above-tag {
+		padding: 0.25rem 0.5rem;
+		.suggested-text {
+			display: flex;
+			animation: fadeIn 0.5s ease-in-out forwards;
+		}
+	}
+}
+
+.github-find-user-page .github-find-user-content .breaker  {
+	font-family: "Product Sans Black", sans-serif;
+}
+
+.github-find-user-page .github-find-user-content .github-user-search {
+	input {
+		font-family: "Product Sans Black", sans-serif;
+	}
+	.search-btn {
+		transition: all 0.5s ease-in-out;
+	}
+}

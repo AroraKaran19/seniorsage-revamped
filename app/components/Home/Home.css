@@ -56,12 +56,12 @@
 .hero-section-service-cards .service-card-1 .service-card-1-inner .services-provided-wrapper .service {
   font-family: "Product Sans Bold", sans-serif;
   font-size: clamp(0.5rem, 4vw, 1.5rem);
+  border: #fff 2px solid;
 }
 
 .hero-section-service-cards .service-card-1 .service-card-1-inner .services-provided-wrapper .service:last-child {
   background-color: #8941FF;
   color: white;
-  border: white 2px solid;
 }
 
 .hero-section-service-cards .service-card-2 .service-card-2-inner {

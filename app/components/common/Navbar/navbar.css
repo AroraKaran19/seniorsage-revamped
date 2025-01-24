@@ -1,0 +1,157 @@
+.navbar {
+  height: clamp(4rem, 8vw, 7.5rem);
+  transition: all 0.5s ease-in-out;
+  will-change: scroll-position;
+  animation: slideFadeDown 0.5s ease-in-out forwards;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+  will-change: scroll-position;
+}
+
+@keyframes slideFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar.box-shadow {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+}
+
+.navbar .main-nav .hamburger-menu .menu-btn {
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.navbar .main-nav .hamburger-menu .menu-btn .cross {
+  transform: translateX(0);
+  animation: slideRight 1.4s ease-in-out;
+}
+
+.navbar .main-nav .hamburger-menu .menu-btn .cross.close {
+  transform: translateX(-100%);
+  animation: slideRight 0.8s ease-in-out;
+}
+
+.navbar .nav-wrapper .menu-container {
+  left: -100vw;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  transition: left 0.8s ease-in-out;
+}
+
+.navbar .nav-wrapper .menu-container.open {
+  left: 0;
+  transition: left 0.8s ease-in-out;
+}
+
+.navbar .nav-wrapper .menu-container .menu-links {
+  padding: clamp(1rem, 5vw, 2rem) clamp(1rem, 6vw, 8.75rem);
+}
+
+.navbar .nav-wrapper .menu-container .menu-links .sub-menu {
+  padding: clamp(0.2rem, 5vw, 0.5rem) clamp(0.5rem, 5vw, 1rem);
+}
+
+.navbar .nav-wrapper .menu-container .menu-links .sub-menu .navigation-link {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.navbar .main-nav .logo-box {
+  padding-left: clamp(0.5rem, 5vw, 8.75rem);
+}
+
+.navbar .main-nav .logo-box .seniorsage-logo {
+  height: clamp(12px, 10vw, 42px);
+  width: clamp(150px, 25vw, 208px);
+}
+
+.navbar .main-nav .nav-links {
+  padding: clamp(0.25rem, 5vw, 0.5rem) clamp(0.5rem, 5vw, 1.5rem);
+}
+
+.navbar .main-nav .nav-links .navigation-link .nav-link-name span {
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(0.5rem, 5vw, 1.5rem);
+}
+
+.navbar .main-nav .nav-links .navigation-link .sub-menu {
+  padding: clamp(0.5rem, 5vw, 1rem);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  animation: slideDown 0.8s ease-in-out forwards;
+}
+
+.navbar .main-nav .nav-links .navigation-link .sub-menu .navigation-link {
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.navbar .main-nav .nav-links .navigation-link .sub-menu .navigation-link:hover {
+  background-color: rgba(138, 79, 79, 0.04);
+}
+
+.navbar .main-nav .authentication-btn {
+  padding-right: clamp(0.5rem, 5vw, 7.75rem);
+}
+
+.navbar .authentication-wrapper {
+  padding: clamp(0px, 5vw, 0.4rem) clamp(0.5rem, 5vw, 2rem);
+}
+
+.navbar .authentication-wrapper span {
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(0rem, 5vw, 2rem);
+}
+
+.navbar .main-nav .hamburger-menu {
+  padding-left: clamp(0.25rem, 5vw, 8.75rem);
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    }
+    .navbar .authentication-wrapper {
+      padding: clamp(2px, 5vw, 0.5rem) clamp(2rem, 5vw, 3rem);
+    }
+    .navbar .main-nav .authentication-wrapper {
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 1024px) { 
+    .navbar .main-nav .logo-box {
+      padding: 0 1rem;
+    }
+  }

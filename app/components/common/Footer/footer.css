@@ -1,0 +1,60 @@
+/* Footer */
+
+.footer .footer-header {
+    padding: clamp(2rem, 5vw, 5.5rem) clamp(2rem, 5vw, 7.875rem) clamp(2rem, 5vw, 4.75rem) clamp(2rem, 7vw, 8rem);
+  }
+  
+  .footer .footer-header .footer-header-text {
+    font-family: "Product Sans Regular", sans-serif;
+    font-size: clamp(1.25rem, 5vw, 2.5rem);
+  }
+  
+  .footer .footer-header .footer-header-btns .footer-get-started-btn {
+    padding: clamp(0px, 4vw, 10px) clamp(0px, 4vw, 35px);
+    font-family: "Product Sans Regular", sans-serif;
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+  }
+  
+  .footer .footer-header .footer-header-btns .footer-get-started-btn:hover span {
+    text-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.5);
+  }
+  
+  .footer .footer-header .footer-header-btns .footer-contact-us-btn {
+    font-family: "Product Sans Regular", sans-serif;
+    font-size: clamp(1.25rem, 5vw, 2.5rem);
+  }
+  
+  .footer .footer-header .footer-header-btns .footer-contact-us-btn:hover {
+    text-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.5);
+  }
+  
+  .footer .footer-content {
+    padding: clamp(0.5rem, 5vw, 4.125rem) clamp(0.5rem, 6vw, 8rem);
+  }
+  
+  .footer .footer-content .footer-content-left .footer-logo .seniorsage-logo {
+    height: clamp(12px, 10vw, 74px);
+    width: clamp(200px, 20vw, 364px);
+  }
+  
+  .footer .footer-content .footer-content-left .footer-seniorsage-desc {
+    font-family: "Product Sans Light", sans-serif;
+    font-size: clamp(1rem, 3vw, 1.75rem);
+  }
+  
+  .footer .footer-content .footer-content-right .footer-links .footer-link-section .footer-link-section-head {
+    font-family: "Product Sans Regular", sans-serif;
+    font-size: clamp(1.25rem, 5vw, 2rem);
+  }
+  
+  .footer .footer-content .footer-content-right .footer-links .footer-link-section .footer-link-section-link {
+    font-family: "Product Sans Regular", sans-serif;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+  
+  .footer .footer-bottom {
+    height: clamp(2.5rem, 5vw, 4.5rem);
+    font-family: "Product Sans Regular", sans-serif;
+    font-size: clamp(0.75rem, 3vw, 1.5rem);
+  }
+  

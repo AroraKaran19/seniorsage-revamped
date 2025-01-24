@@ -1,0 +1,3 @@
+.services-page {
+    padding: clamp(2rem, 5vw, 3rem) clamp(3rem, 5vw, 7.5rem) clamp(2rem, 5vw, 5rem) clamp(3rem, 5vw, 8.75rem);
+}

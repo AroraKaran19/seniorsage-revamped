@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import NavLinks from "./NavLinks";
+import NavLinks from "./components/NavLinks";
 import SeniorSageLogo from "../SeniorSageLogo";
+import "./navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,12 +67,12 @@ const Navbar = () => {
   const [shadow, setShadow] = useState(false);
 
   const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setShadow(true);
-      } else {
-        setShadow(false);
-      }
-    };
+    if (window.scrollY > 10) {
+      setShadow(true);
+    } else {
+      setShadow(false);
+    }
+  };
   // const lastScrollY = useRef<number>(0);
 
   // const handleScroll = () => {
@@ -94,7 +95,9 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`navbar z-[2000] bg-white w-full max-w-full ${shadow ? "box-shadow" : ""}`}
+        className={`navbar z-[2000] bg-white w-full max-w-full ${
+          shadow ? "box-shadow" : ""
+        }`}
       >
         {/* Mobile Wrapper */}
         <div
@@ -134,7 +137,9 @@ const Navbar = () => {
         {/* Main Navbar */}
         <div className="main-nav w-full h-full flex max-w-full gap-6">
           <div
-            className={`hamburger-menu hidden sm:flex sm:flex-1 justify-start items-center select-none ${menuOpen ? "md:mx-2 p-3" : "md:mx-8"}`}
+            className={`hamburger-menu hidden sm:flex sm:flex-1 justify-start items-center select-none ${
+              menuOpen ? "md:mx-2 p-3" : "md:mx-8"
+            }`}
             draggable={false}
           >
             <svg
@@ -150,12 +155,24 @@ const Navbar = () => {
             >
               {!menuOpen ? (
                 <>
-                 <path fill="#fff" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
-        <path fill="#444b54" d="M64,117c-29.2,0-53-23.8-53-53s23.8-53,53-53s53,23.8,53,53S93.2,117,64,117z M64,17c-25.9,0-47,21.1-47,47s21.1,47,47,47s47-21.1,47-47S89.9,17,64,17z"/>
-        <path fill="#444b54" d="M86.5 52h-45c-1.7 0-3-1.3-3-3s1.3-3 3-3h45c1.7 0 3 1.3 3 3S88.2 52 86.5 52zM86.5 67h-45c-1.7 0-3-1.3-3-3s1.3-3 3-3h45c1.7 0 3 1.3 3 3S88.2 67 86.5 67z"/>
-        <g>
-            <path fill="#444b54" d="M86.5,82h-45c-1.7,0-3-1.3-3-3s1.3-3,3-3h45c1.7,0,3,1.3,3,3S88.2,82,86.5,82z"/>
-        </g>
+                  <path
+                    fill="#fff"
+                    d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"
+                  />
+                  <path
+                    fill="#444b54"
+                    d="M64,117c-29.2,0-53-23.8-53-53s23.8-53,53-53s53,23.8,53,53S93.2,117,64,117z M64,17c-25.9,0-47,21.1-47,47s21.1,47,47,47s47-21.1,47-47S89.9,17,64,17z"
+                  />
+                  <path
+                    fill="#444b54"
+                    d="M86.5 52h-45c-1.7 0-3-1.3-3-3s1.3-3 3-3h45c1.7 0 3 1.3 3 3S88.2 52 86.5 52zM86.5 67h-45c-1.7 0-3-1.3-3-3s1.3-3 3-3h45c1.7 0 3 1.3 3 3S88.2 67 86.5 67z"
+                  />
+                  <g>
+                    <path
+                      fill="#444b54"
+                      d="M86.5,82h-45c-1.7,0-3-1.3-3-3s1.3-3,3-3h45c1.7,0,3,1.3,3,3S88.2,82,86.5,82z"
+                    />
+                  </g>
                 </>
               ) : (
                 <>
@@ -170,7 +187,10 @@ const Navbar = () => {
             </svg>
           </div>
           <div className="logo-box flex-1 flex justify-start items-center sm:flex-none flex-grow">
-            <SeniorSageLogo className="cursor-pointer" onClick={() => window.location.replace("/")} />
+            <SeniorSageLogo
+              className="cursor-pointer"
+              onClick={() => window.location.replace("/")}
+            />
           </div>
           <div className="nav-links flex-none sm:hidden flex justify-center items-center gap-16 flex-wrap flex-shrink-0">
             {menu.map((item) => (
