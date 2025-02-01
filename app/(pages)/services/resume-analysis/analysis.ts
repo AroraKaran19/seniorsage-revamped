@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const fetchResumeAnalysis = async (file: File, setResumeData: (data: Object | null) => void) => {
+export const fetchResumeAnalysis = async (file: File, setResumeData: (data: object | null) => void) => {
   const formData = new FormData();
   formData.append("file", file);
 

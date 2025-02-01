@@ -4,7 +4,7 @@ import TickIcon from "@/app/components/common/Svgs/TickIcon";
 import XMarkIcon from "@/app/components/common/Svgs/XMarkIcon";
 import React, { useEffect, useState } from "react";
 
-const ShowAnalysisWrapper = ({ data }: { data: Object }) => {
+const ShowAnalysisWrapper = ({ data }: { data: object }) => {
   const [showFailed, setShowFailed] = useState<boolean>(false);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const ShowAnalysisWrapper = ({ data }: { data: Object }) => {
     <div className="show-analysis-wrapper w-full flex flex-col border-[1px] border-black/30 rounded-3xl">
       <div className="resume-passed-para-container w-full bg-[#4c9fff] rounded-t-3xl flex flex-col gap-8 sm:gap-6">
         <div className="resume-analysis-section-heading mb-2 sm:text-center">
-          We looked through your resume, And here's what we found
+          We looked through your resume, And here&apos;s what we found
         </div>
         {data &&
           Object.entries(data).map(([key, value], index) => {

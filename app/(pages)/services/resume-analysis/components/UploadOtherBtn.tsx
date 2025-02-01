@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from 'react'
-import { FileWrapper } from '../page';
+import { FileWrapper } from '../Wrappers/UserFileWrapper';
 
 const UploadOtherBtn = () => {
 	const { setFile, setResumeData } = useContext(FileWrapper);

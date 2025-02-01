@@ -3,7 +3,7 @@ import PageHeading from "@/app/(pages)/PageHeading";
 import Quote from "@/app/components/common/Svgs/Quote";
 import React, { useContext, useEffect, useState } from "react";
 import { fetchResumeAnalysis } from "../analysis";
-import { FileWrapper } from "../page";
+import { FileWrapper } from "../Wrappers/UserFileWrapper";
 import LoadingDots from "@/app/components/common/LoadingDots";
 import AnalyseBtn from "../../common-components/AnalyseBtn";
 import UploadOtherBtn from "../components/UploadOtherBtn";

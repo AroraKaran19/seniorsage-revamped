@@ -2,7 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import PageHeading from "@/app/(pages)/PageHeading";
 import PlusIcon from "@/app/components/common/Svgs/PlusIcon";
-import { FileWrapper } from "../page";
+import { FileWrapper } from "../Wrappers/UserFileWrapper";
 
 const UploadResume = () => {
   const [draggingFile, setDraggingFile] = useState<boolean>(false);
