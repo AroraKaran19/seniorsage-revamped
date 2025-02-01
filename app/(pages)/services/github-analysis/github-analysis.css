@@ -5,13 +5,8 @@
     font-family: "Product Sans Regular", sans-serif;
 }
 
-.github-analysis-page h1 {
-    font-family: "Product Sans Black", sans-serif;
-    font-size: clamp(2rem,5vw,5rem);
-}
-
 .github-analysis-page .quote-svg {
-    width: clamp(1rem, 5vw, 3rem);
+    width: clamp(1.5rem, 3vw, 3rem);
     height: auto;
     aspect-ratio: 1/1;
     margin-top: 1rem;
@@ -101,20 +96,6 @@
       opacity: 0;
     }
   }
-  
-.github-analysis-page .head-message .loading_text_dots p {
-    transition: all 0.5s ease-in-out;
-}
-
-.github-analysis-page .head-message .loading_text_dots p:nth-child(1) {
-    animation: blink 2s infinite 1s;
-}
-.github-analysis-page .head-message .loading_text_dots p:nth-child(2) {
-    animation: blink 2s infinite 1.5s;
-}
-.github-analysis-page .head-message .loading_text_dots p:nth-child(3) {
-    animation: blink 2s infinite 1.75s;
-}
 
 .github-analysis-page .head-message p.text {
     animation: fadeIn 1s ease-in-out forwards;

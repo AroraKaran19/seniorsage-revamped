@@ -6,6 +6,7 @@ const AnalyseElseBtn = ({ status }: { status: boolean | undefined }) => {
   const { setSomeoneElse } = useContext(anonymousAnalyse);
 
   const handleClick = () => {
+    scrollTo({ top: 0, behavior: "smooth" });
     setSomeoneElse({ value: false });
   };
 

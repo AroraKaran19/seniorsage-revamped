@@ -1,5 +1,5 @@
 import axios from "axios";
-import { responseType } from "./GithubAnalysis";
+import { responseType } from "./pages/GithubAnalysis";
 
 export const fetchData = async (
   username: string,

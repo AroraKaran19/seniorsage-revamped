@@ -1,64 +1,98 @@
-import React from "react";
+"use client";
+import React, { useRef, useState } from "react";
+import FeatureCard from "./components/FeatureCard";
+
+const featureCardData = [
+  {
+    bgColor: "bg-[#8941FF]",
+    shadowColor: "#8941FF",
+    featureNumber: 1,
+    imgSrc: "/feature-github.png",
+    imgAlt: "Github Logo",
+    featureName: "GITHUB ANALYSIS",
+    featureDesc: "Unlocking insights from code!",
+    imgBgColor: "bg-[#F1E9FF]",
+    route: "/github-analysis",
+  },
+  {
+    bgColor: "bg-[#4C9FFF]",
+    shadowColor: "#4C9FFF",
+    featureNumber: 2,
+    imgSrc: "/feature-resume.png",
+    imgAlt: "Resume Icon",
+    featureName: "RESUME SCORE",
+    featureDesc: "Transforming resumes into market-ready masterpieces!",
+    imgBgColor: "bg-[#E2F0FF]",
+  },
+  {
+    bgColor: "bg-[#ff33a6]",
+    shadowColor: "#ff33a6",
+    featureNumber: 3,
+    imgSrc: "/feature-courses.png",
+    imgAlt: "Course Recommendation Icon",
+    featureName: "Course Recommendation",
+    featureDesc: "Get personalized course recommendations!",
+    imgBgColor: "bg-[#FFD9F2]",
+  },
+  {
+    bgColor: "bg-[#FF783F]",
+    shadowColor: "#FF783F",
+    featureNumber: 4,
+    imgSrc: "/feature-roadmap.png",
+    imgAlt: "Roadmap Icon",
+    featureName: "ROAD MAP",
+    featureDesc: "Guided journey through future milestones!",
+    imgBgColor: "bg-[#FDE4D9]",
+  },
+];
 
 const HomeWhatWeDoServiceCards = () => {
+
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (carouselRef.current) {
+      setIsDragging(true);
+      setStartX(e.pageX - carouselRef.current.offsetLeft);
+      setScrollLeft(carouselRef.current.scrollLeft);
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging || !carouselRef.current) return;
+    const x = e.pageX - carouselRef.current.offsetLeft + 1;
+    const walk = Math.ceil(x - startX); // Scroll Speed
+    carouselRef.current.scrollTo({
+      left: scrollLeft - walk,
+      behavior: "smooth",
+    });
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
   return (
-    <>
-      <div className="feature-card-1 feature-card flex-1 flex min-h-[43.188rem] bg-[#8941FF] rounded-[3rem] pt-[4.25rem] shadow-2xl hover:mt-[4.25rem] hover:pt-0 hover:min-h-[38.938rem] transition-all duration-500 ease-in-out sm:min-h-0 sm:w-full sm:hover:mt-0 sm:hover:pt-[4.25rem] sm:hover:min-h-0">
-        <div className="feature-card-1-inner h-full w-full rounded-[2.8rem] bg-white shadow-lg hover:shadow-[#8941FF] transition-all duration-[500ms] ease-in-out border-[0.5px] border-black/40 overflow-hidden relative">
-          <div className="feature-number absolute text-[#8941FF] text-opacity-10 leading-none h-fit w-fit top-[-5%] right-5 z-40 sm:top-3">1</div>
-          <div className="number-blur absolute top-2/3 bg-white/50 w-full z-[55] h-full backdrop-blur-[1px]"></div>
-          <div className="feature-container h-full w-full gap-[2.375rem] flex flex-col transition-all duration-[300ms] ease-in-out transform translate-y-[40%] sm:translate-y-0 px-[3.25rem] sm:py-5 z-[60] relative">
-            <div className="feature-logo bg-[#F1E9FF] p-5 rounded-full w-fit">
-              <img
-                src="/feature-github.png"
-                alt="Github Logo"
-                draggable={false}
-              />
-            </div>
-            <div className="feature-info w-full flex flex-col gap-[1.25rem]">
-              <div className="feature-name sm:text-center">GITHUB ANALYSIS</div>
-              <div className="feature-desc flex flex-wrap sm:justify-center sm:text-center">
-                Unlocking insights from code!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="feature-card-2 feature-card flex-1 flex min-h-[43.188rem] bg-[#4C9FFF] rounded-[3rem] pt-[4.25rem] shadow-2xl hover:mt-[4.25rem] hover:pt-0 hover:min-h-[38.938rem] transition-all duration-500 ease-in-out sm:min-h-0 sm:w-full sm:hover:mt-0 sm:hover:pt-[4.25rem] sm:hover:min-h-0">
-        <div className="feature-card-2-inner h-full w-full rounded-[2.8rem] bg-white shadow-lg hover:shadow-[#4C9FFF] transition-all duration-[500ms] ease-in-out border-[0.5px] border-black/40 overflow-hidden relative">
-        <div className="feature-number absolute text-[#4C9FFF] text-opacity-10 leading-none h-fit w-fit top-[-5%] right-5 z-40 sm:top-3">2</div>
-        <div className="number-blur absolute top-2/3 bg-white/50 w-full z-[55] h-full backdrop-blur-[1px]"></div>
-          <div className="feature-container h-full w-full gap-[2.375rem] flex flex-col transition-all duration-[300ms] ease-in-out transform translate-y-[40%] sm:translate-y-0 px-[3.25rem] z-[60] sm:py-5 relative">
-            <div className="feature-logo bg-[#E2F0FF] p-5 rounded-full w-fit">
-              <img src="/feature-resume.png" alt="Resume Icon" />
-            </div>
-            <div className="feature-info w-full flex flex-col gap-[1.25rem]">
-              <div className="feature-name sm:text-center">RESUME SCORE</div>
-              <div className="feature-desc flex flex-wrap sm:justify-center sm:text-center">
-                Transforming resumes into market-ready masterpieces!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="feature-card-3 feature-card flex-1 flex min-h-[43.188rem] bg-[#FF783F] rounded-[3rem] pt-[4.25rem] shadow-2xl hover:mt-[4.25rem] hover:pt-0 hover:min-h-[38.938rem] transition-all duration-500 ease-in-out sm:min-h-0 sm:w-full sm:hover:mt-0 sm:hover:pt-[4.25rem] sm:hover:min-h-0">
-        <div className="feature-card-3-inner h-full w-full rounded-[2.8rem] bg-white shadow-lg hover:shadow-[#FF783F] transition-all duration-[500ms] ease-in-out border-[0.5px] border-black/40 overflow-hidden relative">
-        <div className="feature-number absolute text-[#FF783F] text-opacity-10 leading-none h-fit w-fit top-[-5%] right-5 z-40 sm:top-3">3</div>
-        <div className="number-blur absolute top-2/3 bg-white/50 w-full z-[55] h-full backdrop-blur-[1px]"></div>
-          <div className="feature-container h-full w-full gap-[2.375rem] flex flex-col transition-all duration-[300ms] ease-in-out transform translate-y-[40%] sm:translate-y-0 px-[3.25rem] z-[60] sm:py-5 relative">
-            <div className="feature-logo bg-[#FDE4D9] p-5 rounded-full w-fit">
-              <img src="/feature-roadmap.png" alt="Roadmap Icon" />
-            </div>
-            <div className="feature-info w-full flex flex-col gap-[1.25rem]">
-              <div className="feature-name sm:text-center">ROAD MAP</div>
-              <div className="feature-desc flex flex-wrap sm:justify-center sm:text-center">
-                Guided journey through future milestones!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <div
+      className={`what-we-do-feature-cards w-full flex items-stretch gap-[3.2rem] py-2 select-none overflow-auto scroll-smooth sm:flex-col sm:items-start sm:gap-8 max-w-full ${isDragging ? "cursor-grabbing" : "cursor-default"}`}
+      draggable={false}
+      ref={carouselRef}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
+    >
+      {featureCardData.map((card, index) => (
+        <FeatureCard key={index} {...card} containerState={isDragging} />
+      ))}
+    </div>
   );
 };
 

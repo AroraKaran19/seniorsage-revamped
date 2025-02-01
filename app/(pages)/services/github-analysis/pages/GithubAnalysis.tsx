@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./github-analysis.css";
 import Quote from "@/app/components/common/Svgs/Quote";
-import AnalyzeBtn from "./components/AnalyseBtn";
-import AnalyseWrapper from "./components/AnalyseWrapper";
+import AnalyzeBtn from "../../common-components/AnalyseBtn";
+import AnalyseWrapper from "../components/AnalyseWrapper";
 import LoadingDots from "@/app/components/common/LoadingDots";
-import { userContext } from "./UserResponseWrapper";
-import { fetchValue } from "./analysis";
-import AnalyseElseBtn from "./components/AnalyseElseBtn";
+import { userContext } from "../UserResponseWrapper";
+import { fetchValue } from "../analysis";
+import AnalyseElseBtn from "../components/AnalyseElseBtn";
+import PageHeading from "@/app/(pages)/PageHeading";
 
 export interface responseType {
   status: boolean;
@@ -51,7 +51,7 @@ const GithubAnalysis = ({ fetchInfo }: { fetchInfo: () => void }) => {
       <div className="github-analysis-page w-full flex flex-col">
         <div className="heading-content flex justify-center w-full sm:flex-col">
           <div className="heading-content-left w-2/3 sm:w-full">
-            <h1 className="page-heading">GITHUB ANALYSIS</h1>
+            <PageHeading heading="GITHUB ANALYSIS" />
             <Quote />
             <h2 className="head-message transition-all ease-in-out duration-300 w-[60%] sm:w-full">
               {analysisData != null ? (
@@ -73,7 +73,7 @@ const GithubAnalysis = ({ fetchInfo }: { fetchInfo: () => void }) => {
               )}
             </h2>
             {analysisData && analysisData?.status != false && (
-              <div className="analysis-para-wrapper flex gap-4 flex-wrap w-[55%] sm:w-full ">
+              <div className="analysis-para-wrapper flex gap-4 flex-wrap w-[50%] sm:w-full ">
                 {[
                   "Public Repos",
                   "Programming skills",
@@ -94,9 +94,7 @@ const GithubAnalysis = ({ fetchInfo }: { fetchInfo: () => void }) => {
               </div>
             )}
             {analysisData && analysisData?.status != false && (
-              <>
                 <AnalyzeBtn clickEvent={fetchInfo} />
-              </>
             )}
             {analysisData && (
               <AnalyseElseBtn status={analysisData?.status} />

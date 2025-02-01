@@ -9,8 +9,8 @@ const WhatWeDoSection = () => {
         <HomeWhatWeDoHeader />
       </div>
       <div
-        className="what-we-do-feature-cards w-full flex items-stretch gap-[3.2rem] pb-24 select-none sm:flex-col sm:items-start sm:gap-8 max-w-full sm:pb-10"
-        draggable={false}
+        className="features-card-container w-full flex pb-24 sm:pb-10 rounded-[3rem]"
+        style={{ overflowX: "hidden" }}
       >
         <HomeWhatWeDoFeatureCards />
       </div>

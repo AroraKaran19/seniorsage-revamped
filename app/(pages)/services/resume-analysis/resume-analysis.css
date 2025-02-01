@@ -1,0 +1,217 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes comeFromInside {
+	0% {
+		transform: scale(0.4);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInFromTop {
+    0% {
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.upload-resume-page,
+.resume-analysis-page {
+    padding: clamp(2rem, 15vw, 8rem) clamp(2rem, 8vw, 8.125rem) clamp(2rem, 5vw, 5rem) clamp(2rem, 8vw, 8.125rem);
+    font-family: "Product Sans Regular", sans-serif;
+}
+
+.upload-resume-page .page-header-content {
+    h3 {
+        font-size: clamp(1.25rem, 3vw, 2rem);
+        line-height: 1;
+    }
+}
+
+.upload-resume-page .upload-resume-container {
+    margin-top: clamp(2rem, 5vw, 3rem);
+    height: clamp(15rem, 30vw, 30rem);
+    min-height: max-content;
+
+    p {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: #4f4f4f;
+    }
+}
+
+/* Resume Analysis Page */
+
+.resume-analysis-page .heading-content {
+    .quote-svg {
+        width: clamp(1.5rem, 3vw, 3rem);
+        height: auto;
+        aspect-ratio: 1/1;
+        margin-top: clamp(0.5rem, 3vw, 1rem);
+    }
+
+    .head-message {
+        font-size: clamp(1.25rem, 3vw, 2rem);
+        margin-top: 1rem;
+    }
+
+    .analysis-para-wrapper {
+        margin-top: clamp(1rem, 5vw, 2rem);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.resume-analysis-page .analysis-para-wrapper .analysis-para {
+    font-family: "Product Sans Bold", sans-serif;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.resume-analysis-page .analysis-para-wrapper .analysis-para:nth-child(1) {
+    animation: fadeInFromTop 1s ease-in-out forwards;
+}
+
+.resume-analysis-page .analysis-para-wrapper .analysis-para:nth-child(2) {
+    animation: fadeInFromTop 1s ease-in-out forwards 0.5s;
+}
+
+.resume-analysis-page .analysis-para-wrapper .analysis-para:nth-child(3) {
+    animation: fadeInFromTop 1s ease-in-out forwards 1s;
+}
+
+.resume-analysis-page .analysis-para-wrapper .analysis-para:nth-child(4) {
+    animation: fadeInFromTop 1s ease-in-out forwards 1.5s;
+}
+
+.resume-analysis-page .time-text {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    margin-top: clamp(1rem, 5vw, 1.5rem);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 2s;
+}
+
+.resume-analysis-page .time-text .info-icon-top.showInfo {
+    animation: none;
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+
+    svg {
+        stroke: white;
+    }
+
+    .info-text {
+        display: flex;
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards;
+    }
+}
+
+.resume-analysis-page .analyse-btn {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 2s;
+    transition: all 0.5s ease-in-out;
+}
+
+.resume-analysis-page .resume-analyser-wrapper {
+    margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+.resume-analysis-page .resume-analyser-wrapper .resume-score-wrapper .resume-score-wrapper-left-side,
+.resume-analysis-page .resume-analyser-wrapper .resume-score-wrapper .resume-score-wrapper-right-side {
+    padding: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.25rem, 3vw, 3.5rem);
+    line-height: 1;
+    font-family: "Product Sans Bold";
+    color: white;
+}
+
+.resume-analysis-page .resume-analyser-wrapper .resume-score-wrapper .resume-score-wrapper-left-side .resume-show-outer-circle {
+    background: conic-gradient(transparent calc(var(--data-percentage) * 1%),
+            rgba(255, 255, 255, 0.55) calc(var(--data-percentage) * 1%));
+    transition: all 1s ease-in-out;
+}
+
+.resume-analysis-page .resume-analyser-wrapper .resume-score-wrapper .resume-score-wrapper-left-side .resume-score-container {
+    .score-show-circle {
+        font-size: clamp(2rem, 4vw, 6rem);
+        line-height: 1;
+        padding: clamp(1rem, 5vw, 1.25rem);
+        box-shadow: 0 0 1.5rem white;
+    }
+}
+
+.resume-analysis-page .resume-analyser-wrapper .resume-score-wrapper .resume-score-wrapper-left-side .view-icon svg {
+    height: clamp(1.5rem, 10vw, 13rem);
+    aspect-ratio: 1/1;
+    animation: comeFromInside 0.5s ease-in-out forwards;
+}
+
+.resume-analysis-page .resume-analyser-wrapper .show-analysis-wrapper .resume-passed-para-container,
+.resume-analysis-page .resume-analyser-wrapper .show-analysis-wrapper .resume-failed-para-container {
+    padding: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-family: "Product Sans Bold";
+    color: white;
+}
+
+.resume-analysis-page .resume-analyser-wrapper .show-analysis-wrapper .resume-passed-para-container {
+
+    .resume-analysis-section-heading {
+        font-size: clamp(1.25rem, 3vw, 2.3rem);
+    }
+
+    .analysis-para {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        
+        .analysis-element-heading,
+        .para-text {
+            padding: clamp(2px, 1vw, 8px) clamp(10px, 1vw, 16px);
+        }
+    }
+
+    .analysis-para:last-child {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.resume-analysis-page .resume-analyser-wrapper .show-analysis-wrapper .resume-failed-para-container {
+
+    .resume-analysis-section-heading {
+        font-size: clamp(1.25rem, 3vw, 2.3rem);
+        padding: clamp(12px, 2vw, 16px) clamp(12px, 5vw, 32px);
+    }
+
+    .analysis-para {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        opacity: 0;
+        
+        .analysis-element-heading,
+        .para-text {
+            padding: clamp(2px, 1vw, 8px) clamp(10px, 1vw, 16px);
+        }
+    }
+
+    .analysis-para:nth-child(1) {
+        margin-top: 1.5rem;
+    }
+}

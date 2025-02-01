@@ -1,8 +1,8 @@
 import React from "react";
 import RepositoryWrapper from "./Wrappers/RepositoryWrapper";
 import LanguageWrapper from "./Wrappers/LanguageWrapper";
-import { responseType } from "../GithubAnalysis";
 import CareerWrapper from "./Wrappers/CareerWrapper";
+import { responseType } from "../pages/GithubAnalysis";
 
 const AnalyseWrapper = ({ response , status }: { response: responseType | null; status?: string | undefined }) => {
   return (

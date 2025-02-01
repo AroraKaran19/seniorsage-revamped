@@ -84,7 +84,18 @@
   animation: blink 2s infinite 1.75s;
 }
 
+.page-heading {
+  font-family: "Product Sans Black", sans-serif;
+  font-size: clamp(2rem,5vw,5rem);
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+.notice-info {
+  font-family: "Product Sans Regular", sans-serif;
+  font-size: clamp(.8rem, 2vw, 1.25rem);
 }

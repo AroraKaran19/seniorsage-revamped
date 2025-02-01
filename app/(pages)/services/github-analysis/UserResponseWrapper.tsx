@@ -7,7 +7,7 @@ import React, {
   useState,
 } from "react";
 import { fetchData } from "./analysis";
-import GithubAnalysis from "./GithubAnalysis";
+import GithubAnalysis from "./pages/GithubAnalysis";
 import LoadingPage from "@/app/components/common/LoadingPage";
 
 interface userContextType {

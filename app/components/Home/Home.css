@@ -1,278 +1,264 @@
 /* Home CSS */
 
 .hero-section {
-  padding-left: clamp(2rem, 5vw, 8.125rem);
-  padding-right: clamp(2rem, 5vw, 8.125rem);
+	padding-left: clamp(2rem, 5vw, 8.125rem);
+	padding-right: clamp(2rem, 5vw, 8.125rem);
 }
 
 .text-header .hero-section-left p {
-  font-family: "Product Sans Black Regular", sans-serif;
-  font-size: clamp(2rem, 4vw, 5rem);
+	font-family: "Product Sans Black Regular", sans-serif;
+	font-size: clamp(2rem, 4vw, 5rem);
 }
 
 .text-header .hero-section-right p {
-  font-family: "Product Sans Light Italic", sans-serif;
-  font-size: clamp(1.2rem, 4vw, 2rem);
+	font-family: "Product Sans Light Italic", sans-serif;
+	font-size: clamp(1.2rem, 4vw, 2rem);
 }
 
 .text-header .hero-section-right .get-started-btn {
-  font-family: "Product Sans Regular", sans-serif;
-  font-size: clamp(1.25rem, 4vw, 1.5rem);
+	font-family: "Product Sans Regular", sans-serif;
+	font-size: clamp(1.25rem, 4vw, 1.5rem);
 }
 
 .text-header .hero-section-right .get-started-btn svg {
-  height: clamp(1.25rem, 4vw, 1.5rem);
-  max-width: min-content;
+	height: clamp(1.25rem, 4vw, 1.5rem);
+	max-width: min-content;
 }
 
 .text-header .hero-section-right .get-started-btn:hover svg path {
-  d: path(
-    "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z"
-  );
-  d: "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z";
+	d: path("M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z"
+		);
+	d: "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z";
 }
 
-.hero-section-service-cards .service-card-1, .hero-section-service-cards .service-card-2, .hero-section-service-cards .service-card-3 {
-  box-shadow: 0px 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+.hero-section-service-cards .service-card-1,
+.hero-section-service-cards .service-card-2,
+.hero-section-service-cards .service-card-3 {
+	box-shadow: 0px 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .hero-section-service-cards .service-card-1 {
-  padding-top: clamp(2rem, 5vw, 6rem);
+	padding-top: clamp(2rem, 5vw, 6rem);
 }
 
 .hero-section-service-cards .service-card-1 .service-card-1-inner {
-  padding: clamp(2rem, 5vw, 3.75rem) clamp(2rem, 5vw, 3.25rem);
+	padding: clamp(2rem, 5vw, 3.75rem) clamp(2rem, 5vw, 3.25rem);
 }
 
-.hero-section-service-cards .service-card-1 .service-card-1-inner .double-quotes svg {
-  height: clamp(1.25rem, 3vw, 2.25rem);
+.hero-section-service-cards .service-card-1 .service-card-1-inner .quote-svg {
+	width: clamp(1.5rem, 3vw, 3rem);
+	aspect-ratio: 1/1;
 }
 
 .hero-section-service-cards .service-card-1 .service-card-1-inner .service-card-header {
-  font-family: "Product Sans Bold", sans-serif;
-  font-size: clamp(1.25rem, 4vw, 2.5rem);
+	font-family: "Product Sans Bold", sans-serif;
+	font-size: clamp(1.25rem, 4vw, 2.5rem);
 }
 
 .hero-section-service-cards .service-card-1 .service-card-1-inner .services-provided-wrapper .service {
-  font-family: "Product Sans Bold", sans-serif;
-  font-size: clamp(0.5rem, 4vw, 1.5rem);
-  border: #fff 2px solid;
+	font-family: "Product Sans Bold", sans-serif;
+	font-size: clamp(0.5rem, 4vw, 1.5rem);
+	border: #fff 2px solid;
 }
 
 .hero-section-service-cards .service-card-1 .service-card-1-inner .services-provided-wrapper .service:last-child {
-  background-color: #8941FF;
-  color: white;
+	background-color: #8941FF;
+	color: white;
 }
 
 .hero-section-service-cards .service-card-2 .service-card-2-inner {
-  gap: clamp(1rem, 5vw, 5.75rem);
+	gap: clamp(1rem, 5vw, 5.75rem);
 }
 
 .hero-section-service-cards .service-card-2 .service-card-2-inner .service-card-header {
-  font-family: "Product Sans Bold", sans-serif;
-  font-size: clamp(1.25rem, 3vw, 2.5rem);
-  padding-top: clamp(0rem, 5vw, 3.5rem);
-  padding-left: clamp(1.5rem, 5vw, 3.5rem);
-  padding-right: clamp(1.5rem, 5vw, 3.5rem);
+	font-family: "Product Sans Bold", sans-serif;
+	font-size: clamp(1.25rem, 3vw, 2.5rem);
+	padding-top: clamp(0rem, 5vw, 3.5rem);
+	padding-left: clamp(1.5rem, 5vw, 3.5rem);
+	padding-right: clamp(1.5rem, 5vw, 3.5rem);
 }
 
 .hero-section-service-cards .service-card-2 .service-card-2-inner .upload-resume-wrapper {
-  padding: clamp(0.5rem, 4vw, 4rem) clamp(0.5rem, 4vw, 3.625rem);
+	padding: clamp(0.5rem, 4vw, 4rem) clamp(0.5rem, 4vw, 3.625rem);
 }
 
 .hero-section-service-cards .service-card-2 .service-card-2-inner .upload-resume-wrapper:hover {
-  .upload-resume-icon svg path {
-    stroke: white;
-    transition: all 0.7s ease-in-out;
-  }
+	.upload-resume-icon svg path {
+		stroke: white;
+		transition: all 0.7s ease-in-out;
+	}
 }
 
 .hero-section-service-cards .service-card-2 .service-card-2-inner .upload-resume-wrapper .upload-resume-text {
-  font-family: "Product Sans Regular", sans-serif;
-  font-size: clamp(0.5rem, 4vw, 2rem);
+	font-family: "Product Sans Regular", sans-serif;
+	font-size: clamp(0.5rem, 4vw, 2rem);
 }
 
 .hero-section-service-cards .service-card-2 .service-card-2-inner .upload-resume-wrapper .upload-resume-icon svg {
-  height: clamp(2rem, 5vw, 4.875rem);
+	height: clamp(2rem, 5vw, 4.875rem);
 }
 
 .hero-section-service-cards .service-card-3 {
-  padding-top: clamp(0rem, 12vw, 14.625rem);
+	padding-top: clamp(0rem, 12vw, 14.625rem);
 }
 
 .hero-section-service-cards .service-card-3 .service-card-3-inner {
-  padding: clamp(0rem, 5vw, 2.75rem);
-  gap: clamp(0rem, 5vw, 4.25rem);
+	padding: clamp(0rem, 5vw, 2.75rem);
+	gap: clamp(0rem, 5vw, 4.25rem);
 }
 
 .hero-section-service-cards .service-card-3 .service-card-3-inner .team-images-wrapper {
-  .team-member:nth-child(2) {
-    transform: translateX(-50%);
-  }
-  .team-member:nth-child(3) {
-    transform: translateX(-100%);
-  }
-  .team-member:nth-child(4) {
-    transform: translateX(-150%);
-  }
-} 
+	.team-member:nth-child(2) {
+		transform: translateX(-50%);
+	}
+
+	.team-member:nth-child(3) {
+		transform: translateX(-100%);
+	}
+
+	.team-member:nth-child(4) {
+		transform: translateX(-150%);
+	}
+}
 
 .hero-section-service-cards .service-card-3 .service-card-3-inner .team-images-wrapper .team-member img {
-  height: clamp(3rem, 5vw, 4.8rem);
-  aspect-ratio: 1/1;
+	height: clamp(3rem, 5vw, 4.8rem);
+	aspect-ratio: 1/1;
 }
 
 .hero-section-service-cards .service-card-3 .service-card-3-inner .service-card-header {
-  font-family: "Product Sans Regular", sans-serif;
-  font-size: clamp(1.25rem, 3vw, 2rem);
+	font-family: "Product Sans Regular", sans-serif;
+	font-size: clamp(1.25rem, 3vw, 2rem);
 }
 
 .hero-section-service-cards .service-card-3 .service-card-3-inner .service-card-header svg {
-  height: clamp(1.25rem, 3vw, 2rem);
+	height: clamp(1.25rem, 3vw, 2rem);
 }
 
 .hero-section-service-cards .service-card-3 .service-card-3-inner:hover .service-card-header svg path {
-  d: path(
-    "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z"
-  );
-  d: "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z";
+	d: path("M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z"
+		);
+	d: "M0 9.35772H50.9956L44.2001 2.29941L46.4134 0L57 11L46.4134 22L44.2001 19.7006L50.9956 12.6423H0V9.35772Z";
 }
 
 .hero-section-service-cards .service-card-3 .service-card-3-inner:hover .team-images-wrapper .team-member {
-  transform: translateX(0) !important;
-} 
+	transform: translateX(0) !important;
+}
+
 .hero-section-service-cards .service-card-3 .service-card-3-inner .team-images-wrapper .team-member:hover img {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .what-we-do {
-  padding: 0 clamp(2rem, 5vw, 8.125rem);
-  padding-top: clamp(1rem, 5vw, 10.813rem);
+	padding: 0 clamp(2rem, 5vw, 8.125rem);
+	padding-top: clamp(1rem, 5vw, 10.813rem);
+}
+
+.what-we-do .what-we-do-feature-cards {
+	scrollbar-width: thin;
+	scroll-behavior: smooth;
+}
+
+.what-we-do .what-we-do-feature-cards .feature-card {
+	transition: all 0.5s ease-in-out;
 }
 
 .what-we-do .what-we-do-feature-cards .feature-card .feature-number {
-  font-family: "Product Sans Regular", sans-serif;
-  font-size: clamp(15rem, 65vw, 41rem);
+	font-family: "Product Sans Regular", sans-serif;
+	font-size: clamp(15rem, 65vw, 41rem);
 }
 
-.what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
-  transform: translateY(28%);
+.what-we-do .what-we-do-feature-cards .feature-card[data-container-state="false"]:hover .feature-container {
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-logo img {
-  height: clamp(2rem, 5vw, 3.5rem);
+	height: clamp(2rem, 5vw, 3.5rem);
 }
 
 .what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-info .feature-name {
-  font-family: "Product Sans Black", sans-serif;
-  font-size: clamp(1.25rem, 3vw, 2.5rem);
-  text-transform: uppercase;
+	font-family: "Product Sans Black", sans-serif;
+	font-size: clamp(1.25rem, 3vw, 2.5rem);
+	text-transform: uppercase;
 }
 
 .what-we-do .what-we-do-feature-cards .feature-card .feature-container .feature-info .feature-desc {
-  font-family: "Product Sans Light", sans-serif;
-  font-size: clamp(1rem, 3vw, 2rem);
-  color: rgba(0, 0, 0, 0.5);
+	font-family: "Product Sans Light", sans-serif;
+	font-size: clamp(1rem, 3vw, 2rem);
+	color: rgba(0, 0, 0, 0.5);
 }
 
 /* Smaller Screen */
 @media (max-width: 1024px) {
-  .hero-section-service-cards .service-card-1 {
-    padding-top: 0;
-  }
-  .hero-section-service-cards .service-card-2 .service-card-2-inner .service-card-header {
-    padding-bottom: clamp(0rem, 5vw, 3.5rem);
-  }
-  .hero-section-service-cards .service-card-3 {
-    padding-top: 0;
-  }
-  .what-we-do .what-we-do-feature-cards .feature-card .feature-number {
-    font-family: "Product Sans Regular", sans-serif;
-    font-size: clamp(15rem, 65vw, 18rem);
-  }
-  .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
-    transform: translateY(0%);
-    align-items: center;
-    justify-content: center;
-  }
-  .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
-    transform: translateY(0%);
-  }
+	.hero-section-service-cards .service-card-1 {
+		padding-top: 0;
+	}
+
+	.hero-section-service-cards .service-card-2 .service-card-2-inner .service-card-header {
+		padding-bottom: clamp(0rem, 5vw, 3.5rem);
+	}
+
+	.hero-section-service-cards .service-card-3 {
+		padding-top: 0;
+	}
+
+	.what-we-do .what-we-do-feature-cards .feature-card .feature-number {
+		font-family: "Product Sans Regular", sans-serif;
+		font-size: clamp(15rem, 65vw, 18rem);
+	}
+
+	.what-we-do .what-we-do-feature-cards .feature-card .feature-container {
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 
 /* Medium Screens */
-@media (min-width: 769px) and (max-width: 1024px) { 
-  .hero-section, 
-  .what-we-do {
-    padding-left: clamp(5rem, 5vw, 8.125rem);
-    padding-right: clamp(5rem, 5vw, 8.125rem);
-  }
+@media (min-width: 769px) and (max-width: 1024px) {
+
+	.hero-section,
+	.what-we-do {
+		padding-left: clamp(5rem, 5vw, 8.125rem);
+		padding-right: clamp(5rem, 5vw, 8.125rem);
+	}
 }
 
 
 /* Responsive Fix */
 @media (min-width: 1025px) and (max-width: 1216px) {
-  .hero-section-service-cards .service-card-3 .service-card-3-inner .service-card-header .service-container {
-      flex-direction: column !important;
-  }
-  .hero-section-service-cards .service-card-3 .service-card-3-inner .team-images-wrapper {
-    flex-direction: column;
-    .team-member:nth-child(2) {
-      transform: translateX(0) translateY(-50%);
-    }
-    .team-member:nth-child(3) {
-      transform: translateX(0) translateY(-100%);
-    }
-    .team-member:nth-child(4) {
-      transform: translateX(0) translateY(-150%);
-    }
-  }
+	.hero-section-service-cards .service-card-3 .service-card-3-inner .service-card-header .service-container {
+		flex-direction: column !important;
+	}
 
-  .hero-section-service-cards .service-card-3 .service-card-3-inner:hover .team-images-wrapper {
-    .team-member:nth-child(2) {
-      transform: translateX(0) translateY(0);
-    }
-    .team-member:nth-child(3) {
-      transform: translateX(0) translateY(0);
-    }
-    .team-member:nth-child(4) {
-      transform: translateX(0) translateY(0);
-    }
-  }
+	.hero-section-service-cards .service-card-3 .service-card-3-inner .team-images-wrapper {
+		flex-direction: column;
 
+		.team-member:nth-child(2) {
+			transform: translateX(0) translateY(-50%);
+		}
 
-  .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
-    transform: translateY(13%);
-  }
-  .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
-    transform: translateY(8%);
-  }
-}
+		.team-member:nth-child(3) {
+			transform: translateX(0) translateY(-100%);
+		}
 
-@media (min-width: 1217px) and (max-width: 1700px) {
-  .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
-    transform: translateY(30%);
-  }
-  .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
-    transform: translateY(20%);
-  }
+		.team-member:nth-child(4) {
+			transform: translateX(0) translateY(-150%);
+		}
+	}
 
-  @media (max-width: 1635px) {
-    .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
-      transform: translateY(25%);
-    }
-    .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
-      transform: translateY(16%);
-    }
-  }
+	.hero-section-service-cards .service-card-3 .service-card-3-inner:hover .team-images-wrapper {
+		.team-member:nth-child(2) {
+			transform: translateX(0) translateY(0);
+		}
 
-  @media (max-width: 1406px) {
-    .what-we-do .what-we-do-feature-cards .feature-card .feature-container {
-      transform: translateY(20%);
-    }
-    .what-we-do .what-we-do-feature-cards .feature-card:hover .feature-container {
-      transform: translateY(13%);
-    }
-  }
+		.team-member:nth-child(3) {
+			transform: translateX(0) translateY(0);
+		}
+
+		.team-member:nth-child(4) {
+			transform: translateX(0) translateY(0);
+		}
+	}
 }

@@ -5,6 +5,7 @@ import Footer from "./components/common/Footer/Footer";
 import AlertWrapper from "./wrappers/AlertWrapper";
 import AuthWrapper from "./wrappers/AuthWrapper";
 import Head from "next/head";
+import NoticeBar from "./components/common/Navbar/NoticeBar";
 
 export const metadata: Metadata = {
   title: "SeniorSage - Your Virtual Senior",
@@ -26,6 +27,7 @@ export default function RootLayout({
       </Head>
       <body className={`antialiased max-w-full`}>
         <AuthWrapper>
+          <NoticeBar />
           <Navbar />
           <AlertWrapper>
             <main className="min-h-screen max-w-full overflow-x-hidden max-h-full">

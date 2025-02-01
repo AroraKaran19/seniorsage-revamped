@@ -1,10 +1,11 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 import { userAuth } from "@/app/wrappers/AuthWrapper";
-import NoGithub from "./NoGithub";
+import NoGithub from "./pages/NoGithub";
 import UserResponseWrapper from "./UserResponseWrapper";
 import LoadingPage from "@/app/components/common/LoadingPage";
 import AnonymousWrapper from "./AnonymousWrapper";
+import "./github-analysis.css";
 
 const Page = () => {
   const { signedIn } = useContext(userAuth);

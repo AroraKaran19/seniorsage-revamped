@@ -2,8 +2,8 @@
 import GithubIcon from "@/app/components/common/Svgs/GithubIcon";
 import StarIcon from "@/app/components/common/Svgs/StarIcon";
 import React, { KeyboardEvent, MouseEvent, useContext, useState } from "react";
-import SearchBtn from "./components/SearchBtn";
-import { anonymousAnalyse } from "./AnonymousWrapper";
+import SearchBtn from "../components/SearchBtn";
+import { anonymousAnalyse } from "../AnonymousWrapper";
 
 const NoGithub = () => {
 	const { setSomeoneElse } = useContext(anonymousAnalyse);
@@ -14,6 +14,10 @@ const NoGithub = () => {
 			setSomeoneElse({ username: search, value: true });
 		}
 	};
+
+  const showAlert = () => {
+    alert("Coming soon!");
+  }
 
   return (
     <div className="github-find-user-page w-full flex flex-col">
@@ -29,7 +33,7 @@ const NoGithub = () => {
             </p>
             <div className="connect-github-btn flex items-stretch relative">
               <span className="px-2 py-1">Connect</span>
-              <div className="connect-github flex items-center gap-2 bg-[#8941FF] text-white px-2 py-0.5 rounded-lg cursor-pointer">
+              <div className="connect-github flex items-center gap-2 bg-[#8941FF] text-white px-2 py-0.5 rounded-lg cursor-pointer" onClick={showAlert}>
                 <GithubIcon className="size-[1.5rem] aspect-square" />
                 <div className="text-center">Github</div>
                 <div className="element-above-tag absolute flex items-center gap-0.5 bg-black text-white text-sm transition-all ease-in-out duration-500 rounded-full -top-2.5 left-[95%] sm:text-[12px] sm:left-[89%]">
